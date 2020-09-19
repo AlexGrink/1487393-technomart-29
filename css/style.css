@@ -1,0 +1,259 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #293449;
+  --basic-red: #EE3643;
+  --basic-white: #FFFFFF;
+  --basic-strange: #rgba(0, 0, 0, 0.0001);
+  --basic-dark-blue: #32425C;
+  --orange: #FFBF47;
+  --light-blue: #3BBCE3;
+  --special-pink: #DC91D8;
+  --basic-green: #63A63E;
+  --special-green: #8ED78F;
+  --slider-background: #rgba(0, 0, 0, 0.25);
+  --light-beige: #F9F5F0;
+  --beige: #F7F3EC;
+  --light-grey: #F1F5F7;
+  --grey: #C5C5C5;
+  --white-transparent: rgba(255, 255, 255, 0.3);
+  --border-grey: #EAEAEA;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: Cuprum, "Pt Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Button */
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  text-align: center;
+  vertical-align: center;
+  text-transform: uppercase;
+}
+
+.promo-button {
+  background-color: var(--white-transparent);
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Main navigation */
+.main-navigation {
+  background-image: url("../img/topbackground.png");
+  background-color: var(--basic-strange);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  color: var(--basic-white);
+}
+
+.header-top {
+  background-color: var(--basic-dark);
+  box-shadow: inset 0px -5px 0px #293449;
+
+}
+
+.favourite,
+.cart {
+  color: var(--basic-white);
+}
+
+.order-button {
+  border: none;
+  text-transform: capitalize;
+  background-color: var(--basic-green);
+
+}
+
+.header-text {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+
+.contacts-text {
+  color: var(--basic-black);
+}
+
+.header-text,
+.contacts-phone {
+  color: var(--basic-red);
+}
+
+.contacts-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.contacts-phone {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+.login-button,
+.register-button {
+  border: none;
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  text-align: center;
+  vertical-align: center;
+}
+
+
+.site-navigation {
+  line-height: 24px;
+  background-color: var(--basic-dark);
+  box-shadow: inset 0px -5px 0px #293449;
+  list-style: none;
+}
+
+.site-navigation-list a {
+  color: var(--basic-white)
+}
+
+/* Promo */
+
+.promo {
+  color: var(--basic-white);
+}
+
+.promo h3 {
+  font-size: 24px;
+  line-height: 30px;
+
+}
+
+.promo h2 {
+  font-size: 36px;
+  line-height: 36px;
+
+}
+
+.promo-subtitle {
+  font-size: 18px;
+  font-weight: 24px;
+}
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.promo-item:first-child,
+.promo-item:last-child {
+  background-color: var(--orange);
+
+}
+
+.promo-item a {
+  color: var(--basic-white);
+}
+
+.promo-item:nth-child(2) {
+  background-color: var(--light-blue);
+}
+
+.promo-item:nth-child(3) {
+  background-color: var(--special-pink);
+
+}
+
+.promo-item:nth-child(4) {
+  background-color: var(--special-green);
+}
+
+.promo-slider {
+  background-color: var(--basic-dark-blue);
+}
+
+/* Популярные товары */
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.popular-header {
+  background-color: var(--beige);
+}
+
+.popular-list {
+  list-style: none;
+  padding: 0;
+}
+
+.catalog-item {
+  box-sizing: border-box;
+  width: 220px;
+  height: 318px;
+  border: 1px solid var(--border-grey);
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+}
+
+
+.catalog-item h3 {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  width: 185px;
+  height: 43px;
+
+
+}
+
+.new-item h3 {
+  width: 157px;
+  height: 41px;
+}
+
+/* Популярные производители */
+
+.brands-list {
+  list-style: none;
+  padding: 0;
+
+}
+
+.brands-list-item {
+  width: 220px;
+  height: 145px;
+}

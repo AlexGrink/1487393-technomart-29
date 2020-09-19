@@ -1,35 +1,38 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&display=swap" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-    <header>
-        <nav>
+<body class="page-body">
+    <header class="main-header">
+        <nav class="main-navigation">
             <div class="header-top">
-                <a href="index.html" class="technomart-logo">
+                <a class="main-header-logo" href="index.html" class="technomart-logo">
                     <img src="https://via.placeholder.com/108x18" alt="Логотип магазина Техномарт" />
                 </a>
                 <label for="search" class="visually-hidden">Поиск:</label>
-                <input type="search" id="search" name="search" placeholder="Поиск:">
+                <input class="search" type="search" id="search" name="search" placeholder="Поиск:">
                 <a class="favourite" href="">Закладки: 0</a>
 
                 <a class="cart" href="">Корзина: 10</a>
 
-                <button type="button" class="order-button">Оформить заказ</button>
+                <button class="button order-button" type="button" class="order-button">Оформить заказ</button>
             </div>
 
-            <p>
+            <p class="header-text">
                 Интернет-магазин
                 строительных материалов<br>
                 и инструментов для ремонта
             </p>
             <p>
-                <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             </p>
             <div class="user">
