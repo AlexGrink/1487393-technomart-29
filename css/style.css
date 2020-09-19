@@ -19,6 +19,8 @@
   --grey: #C5C5C5;
   --white-transparent: rgba(255, 255, 255, 0.3);
   --border-grey: #EAEAEA;
+  --special-beige: #FFD180;
+
 }
 
 /* Global */
@@ -47,7 +49,7 @@ img {
 
 
 
-/* Button */
+/* common */
 .button {
   font-size: 14px;
   line-height: 18px;
@@ -59,17 +61,18 @@ img {
   text-transform: uppercase;
 }
 
-.promo-button {
-  background-color: var(--white-transparent);
-}
-
 .container {
   width: 960px;
   margin: 0 auto;
 }
 
 /* Main navigation */
-.main-navigation {
+.technomart-logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.main-header {
   background-image: url("../img/topbackground.png");
   background-color: var(--basic-strange);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -101,7 +104,7 @@ img {
   line-height: 23px;
 }
 
-
+/* contacts */
 .contacts-text {
   color: var(--basic-black);
 }
@@ -143,7 +146,8 @@ img {
 }
 
 .site-navigation-list a {
-  color: var(--basic-white)
+  color: var(--basic-white);
+  font-size: 18px;
 }
 
 /* Promo */
@@ -166,7 +170,7 @@ img {
 
 .promo-subtitle {
   font-size: 18px;
-  font-weight: 24px;
+  line-height: 24px;
 }
 
 .promo-list {
@@ -201,6 +205,10 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
+.promo-button {
+  background-color: var(--white-transparent);
+}
+
 /* Популярные товары */
 .title {
   margin: 0;
@@ -227,6 +235,7 @@ img {
   line-height: 18px;
   text-align: center;
 }
+
 
 
 .catalog-item h3 {
@@ -256,4 +265,99 @@ img {
 .brands-list-item {
   width: 220px;
   height: 145px;
+}
+
+/* Сервисы */
+.services {
+  background-color: var(--light-grey);
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list-item:not(.services-list-delivery) {
+
+  background-color: var(--basic-dark-blue);
+}
+
+.services-list-item a {
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.services-list-item:not(.services-list-delivery) a {
+  color: var(--basic-white);
+
+}
+
+.services-list-delivery {
+  background-color: var(--basic-white);
+}
+
+.services-list-delivery a {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+/* About */
+.about-list {
+  list-style: none;
+  padding: 0;
+
+}
+
+.about-list-item {
+  font-size: 18px;
+}
+
+.contacts-map {
+  background-color: var(--beige);
+}
+
+
+/* Footer */
+.page-footer {
+  background-color: var(--basic-dark-blue);
+  color: var(--basic-white)
+}
+
+.footer-contacts {
+  font-size: 18px;
+}
+
+.footer-contacts a {
+  color: inherit;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+}
+
+
+.footer-nav-bottom a {
+  color: var(--special-beige);
+}
+
+.footer-bottom {
+  background-color: var(--basic-dark);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-text a {
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--special-beige)
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+}
+
+.social-button {
+  background: linear-gradient(0deg, #212A3A, #212A3A);
 }
