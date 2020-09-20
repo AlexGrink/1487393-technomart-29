@@ -8,6 +8,7 @@
   --basic-strange: #rgba(0, 0, 0, 0.0001);
   --basic-dark-blue: #32425C;
   --orange: #FFBF47;
+  --orange2: #FFC047;
   --light-blue: #3BBCE3;
   --special-pink: #DC91D8;
   --basic-green: #63A63E;
@@ -20,6 +21,8 @@
   --white-transparent: rgba(255, 255, 255, 0.3);
   --border-grey: #EAEAEA;
   --special-beige: #FFD180;
+  --special-white: #F3F7F9;
+  --special-grey: #A9A9A9;
 
 }
 
@@ -57,8 +60,9 @@ img {
   background-color: var(--basic-red);
   color: var(--basic-white);
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
   text-transform: uppercase;
+  font-family: Cuprum;
 }
 
 .container {
@@ -86,6 +90,18 @@ img {
 
 }
 
+.search {
+  background-color: var(--basic-dark);
+  border: none;
+}
+
+.search::placeholder {
+  font-family: Cuprum;
+  font-size: 18px;
+  color: var(--basic-white);
+
+}
+
 .favourite,
 .cart {
   color: var(--basic-white);
@@ -95,6 +111,10 @@ img {
   border: none;
   text-transform: capitalize;
   background-color: var(--basic-green);
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
 
 }
 
@@ -105,16 +125,13 @@ img {
 }
 
 /* contacts */
-.contacts-text {
-  color: var(--basic-black);
-}
-
 .header-text,
 .contacts-phone {
   color: var(--basic-red);
 }
 
 .contacts-text {
+  color: var(--basic-dark-blue);
   font-size: 14px;
   line-height: 24px;
 }
@@ -128,25 +145,27 @@ img {
 
 .login-button,
 .register-button {
+  font-family: Cuprum;
   border: none;
   font-size: 21px;
   line-height: 21px;
   background-color: var(--basic-white);
   color: var(--basic-black);
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
+
 }
 
 
 .site-navigation {
   line-height: 24px;
-  background-color: var(--basic-dark);
+  background-color: var(--basic-dark-blue);
   box-shadow: inset 0px -5px 0px #293449;
   list-style: none;
 }
 
-.site-navigation-list a {
-  color: var(--basic-white);
+.site-navigation-item a {
+  color: var(--light-grey);
   font-size: 18px;
 }
 
@@ -178,10 +197,12 @@ img {
   padding: 0;
 }
 
-.promo-item:first-child,
-.promo-item:last-child {
+.promo-item:first-child {
   background-color: var(--orange);
+}
 
+.promo-item:last-child {
+  color: var(--orange2)
 }
 
 .promo-item a {
@@ -215,10 +236,13 @@ img {
   padding: 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--basic-dark-blue);
 }
 
 .popular-header {
-  background-color: var(--beige);
+  background-color: var(--light-beige);
 }
 
 .popular-list {
@@ -245,8 +269,20 @@ img {
   font-weight: bold;
   width: 185px;
   height: 43px;
+  font-family: "PT Sans";
+}
 
+.catalog-item del {
+  font-family: "PT Sans";
+  font-weight: bold;
+  color: var(--special-grey);
+}
 
+.price {
+  font-family: "PT Sans";
+  font-weight: bold;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
 }
 
 .new-item h3 {
@@ -272,6 +308,10 @@ img {
   background-color: var(--light-grey);
 }
 
+.services p {
+  font-family: "PT Sans";
+}
+
 .services-list {
   list-style: none;
   padding: 0;
@@ -282,9 +322,14 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
+.services-item p {
+  font-family: "PT Sans";
+}
+
 .services-list-item a {
   font-size: 21px;
   line-height: 30px;
+  font-weight: bold;
 }
 
 .services-list-item:not(.services-list-delivery) a {
@@ -297,7 +342,7 @@ img {
 }
 
 .services-list-delivery a {
-  color: var(--basic-black);
+  color: var(--basic-dark-blue);
   background-color: var(--basic-white);
 }
 
@@ -308,12 +353,20 @@ img {
 
 }
 
+.about p {
+  font-family: "PT Sans";
+}
+
 .about-list-item {
   font-size: 18px;
 }
 
 .contacts-map {
   background-color: var(--beige);
+}
+
+.contacts p {
+  font-family: "PT Sans";
 }
 
 
@@ -325,6 +378,7 @@ img {
 
 .footer-contacts {
   font-size: 18px;
+  color: var(--special-white);
 }
 
 .footer-contacts a {
@@ -338,6 +392,10 @@ img {
 
 
 .footer-nav-bottom a {
+  color: var(--special-beige);
+}
+
+site-navigation-item-special {
   color: var(--special-beige);
 }
 
