@@ -202,7 +202,7 @@ img {
 }
 
 .promo-item:last-child {
-  color: var(--orange2)
+  background-color: var(--orange2);
 }
 
 .promo-item a {
