@@ -7,6 +7,7 @@
   --basic-white: #FFFFFF;
   --basic-strange: #rgba(0, 0, 0, 0.0001);
   --basic-dark-blue: #32425C;
+
   --orange: #FFBF47;
   --orange2: #FFC047;
   --light-blue: #3BBCE3;
@@ -23,6 +24,16 @@
   --special-beige: #FFD180;
   --special-white: #F3F7F9;
   --special-grey: #A9A9A9;
+  --hover-green: #5FBB2D;
+  --active-white: rgba(255, 255, 255, 0.5);
+  --active-black: #161D29;
+  --active-red: #BA2732;
+  --hover-red: #CA2C37;
+  --active-dark-blue: #1D2739;
+  --hover-dark-transparent: rgba(197, 197, 197, 0.3);
+  --active-dark-transparent: rgba(169, 169, 169, 0.3);
+
+
 
 }
 
@@ -65,6 +76,15 @@ img {
   font-family: Cuprum;
 }
 
+.button:hover {
+  background-color: var(--hover-red);
+}
+
+.button:active {
+  background-color: var(--active-red);
+}
+
+
 .container {
   width: 960px;
   margin: 0 auto;
@@ -74,6 +94,10 @@ img {
 .technomart-logo {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.technomart-logo:active {
+  background-color: var(--active-red);
 }
 
 .main-header {
@@ -86,7 +110,7 @@ img {
 
 .header-top {
   background-color: var(--basic-dark);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--basic-dark);
 
 }
 
@@ -107,6 +131,25 @@ img {
   color: var(--basic-white);
 }
 
+.favourite:active {
+  background-color: var(--active-black);
+}
+
+.favourite:active,
+.cart:active,
+.order-button:active,
+.search:active::placeholder {
+  color: var(--active-white);
+}
+
+.search:focus::placeholder {
+  color: var(--basic-black);
+}
+
+.search:focus {
+  background-color: var(--basic-white);
+}
+
 .order-button {
   border: none;
   text-transform: capitalize;
@@ -115,7 +158,10 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
+}
 
+.order-button:hover {
+  background-color: var(--hover-green);
 }
 
 .header-text {
@@ -153,20 +199,38 @@ img {
   color: var(--basic-black);
   text-align: center;
   vertical-align: middle;
+}
 
+.login-button:hover,
+.register-button:hover {
+  color: var(--basic-red);
+}
+
+.login-button:active,
+.register-button:active {
+  color: var(--grey);
 }
 
 
 .site-navigation {
   line-height: 24px;
   background-color: var(--basic-dark-blue);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--basic-dark);
   list-style: none;
 }
 
 .site-navigation-item a {
   color: var(--light-grey);
   font-size: 18px;
+}
+
+.site-navigation-item a:hover {
+  background-color: var(--basic-dark);
+}
+
+.site-navigation-item a:active {
+  background-color: var(--active-dark-blue);
+  color: var(--active-white);
 }
 
 /* Promo */
@@ -220,6 +284,14 @@ img {
 
 .promo-item:nth-child(4) {
   background-color: var(--special-green);
+}
+
+.promo-item a:hover {
+  background-color: var(--hover-dark-transparent);
+}
+
+.promo-item a:active {
+  background-color: var(--active-dark-transparent);
 }
 
 .promo-slider {
@@ -322,6 +394,10 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
+.services-list-item:not(.services-list-delivery) a:hover {
+  background-color: var(--basic-dark);
+}
+
 .services-item p {
   font-family: "PT Sans";
 }
@@ -346,7 +422,12 @@ img {
   background-color: var(--basic-white);
 }
 
-/* About */
+/* Цвет заголовков "services и about" */
+.special-title {
+  color: var(--basic-black);
+}
+
+/*about */
 .about-list {
   list-style: none;
   padding: 0;
@@ -399,6 +480,14 @@ site-navigation-item-special {
   color: var(--special-beige);
 }
 
+footer-nav-item a:hover {
+  text-decoration: underline;
+}
+
+footer-nav-item a:active {
+  opacity: 0.5;
+}
+
 .footer-bottom {
   background-color: var(--basic-dark);
   font-size: 16px;
@@ -409,6 +498,14 @@ site-navigation-item-special {
   font-size: inherit;
   line-height: inherit;
   color: var(--special-beige)
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+.footer-text a:active {
+  color: var(--basic-red);
 }
 
 .social {
