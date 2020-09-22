@@ -488,6 +488,7 @@ site-navigation-item-special {
 .footer-nav .site-navigation-item a:active {
   text-decoration: none;
   opacity: 0.5;
+  background-color: transparent;
 }
 
 .footer-bottom {
