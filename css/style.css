@@ -480,11 +480,13 @@ site-navigation-item-special {
   color: var(--special-beige);
 }
 
-footer-nav-item a:hover {
+.footer-nav .site-navigation-item a:hover {
   text-decoration: underline;
+  background-color: transparent;
 }
 
-footer-nav-item a:active {
+.footer-nav .site-navigation-item a:active {
+  text-decoration: none;
   opacity: 0.5;
 }
 
