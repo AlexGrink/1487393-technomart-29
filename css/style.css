@@ -32,6 +32,7 @@
   --active-dark-blue: #1D2739;
   --hover-dark-transparent: rgba(197, 197, 197, 0.3);
   --active-dark-transparent: rgba(169, 169, 169, 0.3);
+  --lighter-grey: #F2F6F8;
 
 
 
@@ -185,7 +186,7 @@ img {
 .contacts-phone {
   font-size: 21px;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 
@@ -342,6 +343,7 @@ img {
   width: 185px;
   height: 43px;
   font-family: "PT Sans";
+  color: var(--basic-black);
 }
 
 .catalog-item del {
@@ -518,4 +520,160 @@ site-navigation-item-special {
 
 .social-button {
   background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+/* Catalog html */
+
+/* header */
+
+.user {
+  background-image: url('../img/user-background.jpg');
+  filter: drop-shadow(0px 4px 4px var(--slider-background));
+}
+
+
+
+.user a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black)
+}
+
+.user-buttons a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-dark-blue);
+}
+
+.user-buttons a:hover {
+  color: var(--basic-red);
+}
+
+.user a:active,
+.user-buttons a:active {
+  color: var(--grey);
+}
+
+/* main */
+
+/* Повлияет ли этот селектор на критерии? Или нормально?*/
+.wrapper {
+  font-family: "PT Sans";
+}
+
+.title {
+  font-family: Cuprum;
+}
+
+/* Крошки. Хлебные крошки. */
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  line-height: 18px;
+  color: var(--basic-black)
+}
+
+/* Main-title */
+.main-title {
+  background-color: var(--lighter-grey);
+}
+
+/*filter sorting*/
+.filter h2,
+.sorting,
+.sorting h2 {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--beige);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.sorting h2 {
+  display: inline-block;
+}
+
+.active-control {
+  color: var(--basic-red)
+}
+
+.sorting a:nth-of-type(2),
+.sorting a:nth-of-type(3) {
+  opacity: 0.3;
+}
+
+.ascending-button {
+  background-color: var(--basic-red);
+}
+
+.descending-button {
+  background-color: var(--grey);
+}
+
+/*кнопки "купить" и "в закладки" */
+.buy-button,
+.favourite-button {
+  box-sizing: border-box;
+  width: 135px;
+  height: 38px;
+  font-size: 14px;
+  font-family: Cuprum;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.buy-button {
+  color: var(--basic-white);
+  border: none;
+  background-color: #63A63E;
+  box-shadow: inset 0px -3px 0px #367315;
+}
+
+.favourite-button {
+  color: var(--basic-dark-blue);
+  border: 3px solid #63A63E;
+}
+
+/* GOODS */
+.goods-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Pagination */
+
+.pagination {
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-page {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 18px;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.next-page {
+  width: 140px;
+}
+
+.pagination-page:not(.active-page) {
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+}
+
+.active-page {
+  background-color: var(--basic-red);
+}
+
+.about-goods {
+  width: 100%;
+  background-color: var(--light-grey);
 }
