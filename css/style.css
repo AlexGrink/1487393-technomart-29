@@ -81,8 +81,10 @@ img {
   background-color: var(--hover-red);
 }
 
-.button:active {
+.button:active,
+.button:focus {
   background-color: var(--active-red);
+  outline: none;
 }
 
 
@@ -143,6 +145,11 @@ img {
   color: var(--active-white);
 }
 
+.order-button:focus,
+.search:focus {
+  outline: none;
+}
+
 .search:focus::placeholder {
   color: var(--basic-black);
 }
@@ -187,6 +194,7 @@ img {
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
+  border: 3px solid var(--basic-white);
 }
 
 
@@ -210,6 +218,11 @@ img {
 .login-button:active,
 .register-button:active {
   color: var(--grey);
+}
+
+.login-button:focus,
+.register-button:focus {
+  outline: none;
 }
 
 
@@ -511,6 +524,7 @@ site-navigation-item-special {
 
 .footer-text a:active {
   color: var(--basic-red);
+  text-decoration: none;
 }
 
 .social {
@@ -600,17 +614,26 @@ site-navigation-item-special {
   color: var(--basic-red)
 }
 
-.sorting a:nth-of-type(2),
-.sorting a:nth-of-type(3) {
+.sorting-control:not(.active-control) {
   opacity: 0.3;
 }
 
-.ascending-button {
+.sorting-control:hover {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.sorting .ascending-button {
   background-color: var(--basic-red);
 }
 
 .descending-button {
   background-color: var(--grey);
+}
+
+.ascending-button:hover,
+.descending-button:hover {
+  background-color: var(--basic-black);
 }
 
 /*кнопки "купить" и "в закладки" */
@@ -636,6 +659,29 @@ site-navigation-item-special {
   color: var(--basic-dark-blue);
   border: 3px solid #63A63E;
 }
+
+.buy-button:hover {
+  background-color: #5FBB2D;
+}
+
+.buy-button:active,
+.buy-button:focus {
+  background-color: #518534;
+  outline: none;
+}
+
+.favourite-button:hover {
+  border: 3px solid #32425C;
+}
+
+.favourite-button:active {
+  opacity: 0.5;
+}
+
+.favourite-button:focus {
+  outline: none;
+}
+
 
 /* GOODS */
 .goods-list {
@@ -668,6 +714,15 @@ site-navigation-item-special {
   border: 1px solid #E5E5E5;
   border-radius: 2px;
 }
+
+.pagination-page:hover {
+  border: 1px solid #C5C5C5;
+}
+
+.pagination-page:active {
+  border: 1px solid var(--basic-red);
+}
+
 
 .active-page {
   background-color: var(--basic-red);
