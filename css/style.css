@@ -222,6 +222,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .header-middle p {
   margin: 0;
 }
@@ -364,9 +365,11 @@ img {
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
 }
+
 .promo .button {
   width: 192px;
 }
+
 .promo-button {
   background-color: var(--white-transparent);
 }
@@ -558,6 +561,7 @@ img {
 .about-list-item {
   font-size: 18px;
 }
+
 .about .button {
   width: 220px;
 }
@@ -578,6 +582,7 @@ img {
 .contacts .button {
   width: 300px;
 }
+
 /* Footer */
 .page-footer .container {
   display: grid;
@@ -635,13 +640,16 @@ site-navigation-item-special {
   line-height: 18px;
   margin: 0;
 }
+
 .footer-bottom .container {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
+
 .copyright {
   max-width: 230px;
 }
+
 .footer-text {
   max-width: 150px;
   margin: 0;
@@ -705,7 +713,6 @@ site-navigation-item-special {
 
 /* main */
 
-/* Повлияет ли этот селектор на критерии? Или нормально?*/
 .wrapper {
   font-family: "PT Sans";
 }
@@ -714,8 +721,17 @@ site-navigation-item-special {
   font-family: Cuprum;
 }
 
+/* Grid */
+.catalog-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+
 /* Крошки. Хлебные крошки. */
 .breadcrumbs {
+  grid-column: 1/-1;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -732,11 +748,12 @@ site-navigation-item-special {
 
 /* Main-title */
 .main-title {
+  grid-column: 1/-1;
   background-color: var(--lighter-grey);
 }
 
 /*filter sorting*/
-.filter h2,
+.filter-title,
 .sorting,
 .sorting h2 {
   font-size: 13px;
@@ -744,6 +761,27 @@ site-navigation-item-special {
   background-color: var(--beige);
   font-weight: normal;
   text-transform: uppercase;
+}
+
+.filters {
+  width: 220px;
+  grid-row-start: 4;
+  grid-column: 1/2;
+}
+
+.filter-title {
+  box-sizing: border-box;
+  grid-row-start: 3;
+  grid-column-start: 1;
+  margin: 0;
+  height: 38px;
+  padding: 10px;
+}
+
+.sorting {
+  grid-column: 2/-1;
+  grid-row: 3/4;
+  height: 38px;
 }
 
 .sorting h2 {
@@ -822,15 +860,36 @@ site-navigation-item-special {
 }
 
 /* GOODS */
+.goods {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: -1;
+}
+
 .goods-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 8px;
+}
+
+.goods-list ul {
+  margin: 0;
+}
+
+.goods-title {
+  display: block;
+  max-width: 185px;
+
 }
 
 /* Pagination */
 
 .pagination {
+  grid-column: 2/-1;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -879,6 +938,11 @@ site-navigation-item-special {
 .about-goods {
   width: 100%;
   background-color: var(--light-grey);
+}
+
+.about-goods p {
+  margin: 0;
+  max-width: 910px;
 }
 
 .about-goods .title {
