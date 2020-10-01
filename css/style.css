@@ -71,13 +71,16 @@ img {
 
 /* common */
 .button {
+  display: block;
+  box-sizing: border-box;
+  height: 38px;
   font-size: 14px;
   line-height: 18px;
   border: none;
   background-color: var(--basic-red);
   color: var(--basic-white);
   text-align: center;
-  vertical-align: middle;
+  padding: 10px;
   text-transform: uppercase;
   font-family: Cuprum;
 }
@@ -108,8 +111,14 @@ img {
 
 /* Main navigation */
 .technomart-logo {
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+  height: 47px;
+  padding: 12px 57px 15px 55px;
 }
 
 .technomart-logo:active {
@@ -131,12 +140,17 @@ img {
 }
 
 .header-top {
-
+  height: 42px;
   background-color: var(--basic-dark);
   box-shadow: inset 0px -5px 0px var(--basic-dark);
+  margin-bottom: 46px;
+  vertical-align: top;
 }
 
 .search {
+  vertical-align: top;
+  width: 271px;
+  height: 42px;
   background-color: var(--basic-dark);
   border: none;
 }
@@ -183,12 +197,14 @@ img {
 
 .order-button {
   border: none;
+  padding: 9px;
   text-transform: capitalize;
   background-color: var(--basic-green);
   font-family: Cuprum;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
+  vertical-align: top;
 }
 
 .order-button:hover {
@@ -196,6 +212,7 @@ img {
 }
 
 .header-text {
+  max-width: 200px;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -204,6 +221,9 @@ img {
 .header-middle {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+.header-middle p {
+  margin: 0;
 }
 
 /* contacts */
@@ -219,6 +239,8 @@ img {
 }
 
 .contacts-phone {
+  display: block;
+  width: 270px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -227,14 +249,14 @@ img {
 
 .login-button,
 .register-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 12px;
   font-family: Cuprum;
-  border: none;
   font-size: 21px;
   line-height: 21px;
   background-color: var(--basic-white);
   color: var(--basic-black);
-  text-align: center;
-  vertical-align: middle;
 }
 
 .login-button:hover,
@@ -275,6 +297,7 @@ img {
 
 /* Promo */
 .promo {
+  color: var(--basic-white);
   margin-bottom: 60px;
 }
 
@@ -341,7 +364,9 @@ img {
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
 }
-
+.promo .button {
+  width: 192px;
+}
 .promo-button {
   background-color: var(--white-transparent);
 }
@@ -373,9 +398,6 @@ img {
 .popular-header .button {
   justify-self: end;
   width: 192px;
-  height: 38px;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .popular-list {
@@ -385,7 +407,6 @@ img {
   gap: 20px;
   padding: 0;
   margin: 0;
-
 }
 
 .catalog-item {
@@ -468,7 +489,6 @@ img {
   padding: 0;
   margin: 0;
   width: 240px;
-
 }
 
 .services-list-item:not(.services-list-delivery) {
@@ -481,7 +501,6 @@ img {
 
 .services-item {
   width: 620px;
-
 }
 
 .services-item p {
@@ -495,7 +514,6 @@ img {
 }
 
 .services-list-item {
-
   box-sizing: border-box;
   width: 240px;
   height: 61px;
@@ -540,6 +558,9 @@ img {
 .about-list-item {
   font-size: 18px;
 }
+.about .button {
+  width: 220px;
+}
 
 .contacts {
   width: 320px;
@@ -554,15 +575,25 @@ img {
   font-family: "PT Sans";
 }
 
+.contacts .button {
+  width: 300px;
+}
 /* Footer */
+.page-footer .container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .page-footer {
   background-color: var(--basic-dark-blue);
   color: var(--basic-white);
 }
 
 .footer-contacts {
+  max-width: 325px;
   font-size: 18px;
   color: var(--special-white);
+  margin: 0;
 }
 
 .footer-contacts a {
@@ -604,8 +635,15 @@ site-navigation-item-special {
   line-height: 18px;
   margin: 0;
 }
-
+.footer-bottom .container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.copyright {
+  max-width: 230px;
+}
 .footer-text {
+  max-width: 150px;
   margin: 0;
 }
 
@@ -642,7 +680,6 @@ site-navigation-item-special {
 .user {
   background-image: url("../img/user-background.jpg");
   filter: drop-shadow(0px 4px 4px var(--slider-background));
-
 }
 
 .user a {
@@ -742,9 +779,7 @@ site-navigation-item-special {
 /*кнопки "купить" и "в закладки" */
 .buy-button,
 .favourite-button {
-  box-sizing: border-box;
   width: 135px;
-  height: 38px;
   font-size: 14px;
   line-height: 18px;
   font-family: Cuprum;
@@ -814,7 +849,6 @@ site-navigation-item-special {
 .pagination-page a {
   color: var(--basic-black);
   text-transform: uppercase;
-
 }
 
 .next-page {
