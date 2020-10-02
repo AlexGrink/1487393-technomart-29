@@ -89,12 +89,13 @@ img {
   background-color: var(--hover-red);
 }
 
-.button:active,
-.button:focus {
+.button:active {
   background-color: var(--active-red);
   outline: none;
 }
-
+.button:focus {
+  outline: none;
+}
 .container {
   width: 940px;
   margin: 0 auto;
@@ -143,13 +144,13 @@ img {
   height: 42px;
   background-color: var(--basic-dark);
   box-shadow: inset 0px -5px 0px var(--basic-dark);
-  margin-bottom: 46px;
-  vertical-align: top;
+  margin-bottom: 43px;
 }
-
+.header-top .container {
+  display: flex;
+}
 .search {
-  vertical-align: top;
-  width: 271px;
+  width: 269px;
   height: 42px;
   background-color: var(--basic-dark);
   border: none;
@@ -163,8 +164,23 @@ img {
 }
 
 .favourite,
-.cart {
+.cart,
+.order-button {
+  box-sizing: border-box;
+  height: 42px;
+  width: 150px;
   color: var(--basic-white);
+  padding: 9px;
+}
+.favourite {
+  padding-left: 43px;
+  padding-right: 24px;
+}
+.cart {
+  padding-left: 49px;
+}
+.order-button {
+  padding-left: 19px;
 }
 
 .page-body__inner .cart {
@@ -197,14 +213,12 @@ img {
 
 .order-button {
   border: none;
-  padding: 9px;
   text-transform: capitalize;
   background-color: var(--basic-green);
   font-family: Cuprum;
   font-size: 18px;
   line-height: 24px;
-  color: var(--basic-white);
-  vertical-align: top;
+  text-align: center;
 }
 
 .order-button:hover {
@@ -221,6 +235,8 @@ img {
 .header-middle {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 30px;
+  margin-bottom: 46px;
 }
 
 .header-middle p {
@@ -241,7 +257,10 @@ img {
 
 .contacts-phone {
   display: block;
+  box-sizing: border-box;
   width: 270px;
+  height: 45px;
+  padding: 4px 42px 5px 71px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -276,13 +295,31 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
   line-height: 24px;
   background-color: var(--basic-dark-blue);
-  box-shadow: inset 0px -5px 0px var(--basic-dark);
   list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0px -5px 0px var(--basic-dark);
+  box-sizing: border-box;
+  width: 940px;
+  height: 60px;
+  margin-bottom: 60px;
+}
+
+.site-navigation-item {
+  height: 60px;
+  width: 100%;
 }
 
 .site-navigation-item a {
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 16px;
+  height: 55px;
   color: var(--basic-white);
   font-size: 18px;
 }
@@ -290,10 +327,17 @@ img {
 .site-navigation-item a:hover {
   background-color: var(--basic-dark);
 }
+.site-navigation a:hover {
+  height: 60px;
+}
 
 .site-navigation-item a:active {
+  height: 55px;
   background-color: var(--active-dark-blue);
   color: var(--active-white);
+}
+.site-navigation > a:active {
+  height: 60px;
 }
 
 /* Promo */
@@ -325,7 +369,10 @@ img {
   padding: 0;
   margin: 0;
 }
-
+.promo-item {
+  max-width: 300px;
+  padding-left: 22px;
+}
 .promo-item:first-child {
   background-color: var(--orange);
 }
@@ -364,14 +411,17 @@ img {
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
+  padding-left: 24px;
 }
 
-.promo .button {
+.promo-slider .button {
   width: 192px;
 }
 
 .promo-button {
   background-color: var(--white-transparent);
+  display: block;
+  width: 135px;
 }
 
 /* Популярные товары */
@@ -390,16 +440,18 @@ img {
 }
 
 .popular-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--light-beige);
   height: 89px;
   margin-bottom: 20px;
   align-content: center;
+  padding-left: 28px;
+  padding-right: 15px;
 }
 
 .popular-header .button {
-  justify-self: end;
   width: 192px;
 }
 
@@ -606,6 +658,8 @@ img {
 }
 
 .footer-nav {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -672,6 +726,8 @@ site-navigation-item-special {
 }
 
 .social {
+  display: flex;
+  margin-right: 1px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -727,7 +783,6 @@ site-navigation-item-special {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
-
 
 /* Крошки. Хлебные крошки. */
 .breadcrumbs {
@@ -883,7 +938,6 @@ site-navigation-item-special {
 .goods-title {
   display: block;
   max-width: 185px;
-
 }
 
 /* Pagination */
