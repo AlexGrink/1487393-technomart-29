@@ -38,7 +38,7 @@
             <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
-          <div>
+          <div class="guest-buttons">
             <a class="login-button">Войти</a>
             <a class="register-button">Регистрация</a>
           </div>
@@ -79,19 +79,25 @@
         <li class="promo-slider">
           <div class="slide1 visually-hidden">
             <h2>Дрели</h2>
-            <p class="promo-subtitle">Соседям на радость</p>
+            <span class="promo-subtitle">Соседям на радость</span>
           </div>
           <div class="slide2">
             <h2>Перфораторы</h2>
-            <p class="promo-subtitle">Настоящие мужские игрушки </p>
+            <span class="promo-subtitle">Настоящие мужские игрушки </span>
           </div>
           <!--Кнопки вперед и назад-->
-          <button class="button-next" type="button"></button>
-          <button class="button-back" type="button"></button>
-          <a class="button" href="catalog.html">Открыть каталог</a>
-          <!--Нижние кнопки на слайдере-->
-          <input type="radio" name="slider-radio" value="slide1">
-          <input type="radio" name="slider-radio" value="slide2" checked>
+          <div class="slider-buttons">
+            <button class="button-next" type="button"><img src="img/icon-left.svg" width="22" height="40"></button>
+            <button class="button-back" type="button"><img src="img/icon-left.svg" width="22" height="40"></button>
+          </div>
+          <div class="promo-row">
+            <a class="button" href="catalog.html">Открыть каталог</a>
+            <!--Нижние кнопки на слайдере-->
+            <form>
+              <input type="radio" name="slider-radio" value="slide1">
+              <input type="radio" name="slider-radio" value="slide2" checked>
+            </form>
+          </div>
         </li>
         <li class="promo-item">
           <h3>Скидки 50%</h3>

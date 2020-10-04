@@ -93,9 +93,11 @@ img {
   background-color: var(--active-red);
   outline: none;
 }
+
 .button:focus {
   outline: none;
 }
+
 .container {
   width: 940px;
   margin: 0 auto;
@@ -133,6 +135,7 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   font-size: 18px;
   color: var(--basic-white);
+  max-height: 320px;
 }
 
 .main-navigation {
@@ -144,11 +147,13 @@ img {
   height: 42px;
   background-color: var(--basic-dark);
   box-shadow: inset 0px -5px 0px var(--basic-dark);
-  margin-bottom: 43px;
+  margin-bottom: 46px;
 }
+
 .header-top .container {
   display: flex;
 }
+
 .search {
   width: 269px;
   height: 42px;
@@ -172,13 +177,16 @@ img {
   color: var(--basic-white);
   padding: 9px;
 }
+
 .favourite {
   padding-left: 43px;
   padding-right: 24px;
 }
+
 .cart {
   padding-left: 49px;
 }
+
 .order-button {
   padding-left: 19px;
 }
@@ -236,11 +244,17 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-left: 30px;
-  margin-bottom: 46px;
+  margin-bottom: 43px;
 }
 
 .header-middle p {
   margin: 0;
+}
+
+.guest-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* contacts */
@@ -269,7 +283,6 @@ img {
 
 .login-button,
 .register-button {
-  display: inline-block;
   box-sizing: border-box;
   padding: 12px;
   font-family: Cuprum;
@@ -277,6 +290,17 @@ img {
   line-height: 21px;
   background-color: var(--basic-white);
   color: var(--basic-black);
+}
+
+.login-button {
+  margin-left: 20px;
+  width: 121px;
+  padding-left: 45px;
+}
+
+.register-button {
+  width: 150px;
+  text-align: center;
 }
 
 .login-button:hover,
@@ -311,12 +335,13 @@ img {
 
 .site-navigation-item {
   height: 60px;
-  width: 100%;
+  flex-grow: 1;
+  align-content: center;
 }
 
 .site-navigation-item a {
-  display: block;
   text-align: center;
+  display: block;
   box-sizing: border-box;
   padding-top: 16px;
   height: 55px;
@@ -327,6 +352,7 @@ img {
 .site-navigation-item a:hover {
   background-color: var(--basic-dark);
 }
+
 .site-navigation a:hover {
   height: 60px;
 }
@@ -336,7 +362,8 @@ img {
   background-color: var(--active-dark-blue);
   color: var(--active-white);
 }
-.site-navigation > a:active {
+
+.site-navigation>a:active {
   height: 60px;
 }
 
@@ -346,14 +373,17 @@ img {
   margin-bottom: 60px;
 }
 
-.promo h3 {
-  font-size: 24px;
-  line-height: 30px;
-}
-
 .promo h2 {
   font-size: 36px;
   line-height: 36px;
+
+}
+
+.promo h3 {
+  margin-top: 20px;
+  margin-bottom: 14px;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .promo-subtitle {
@@ -369,10 +399,13 @@ img {
   padding: 0;
   margin: 0;
 }
+
 .promo-item {
   max-width: 300px;
+  min-height: 123px;
   padding-left: 22px;
 }
+
 .promo-item:first-child {
   background-color: var(--orange);
 }
@@ -412,16 +445,55 @@ img {
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
   padding-left: 24px;
+  padding-right: 20px;
+  min-height: 266;
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 39px;
+  height: 40px;
+}
+
+.button-next,
+.button-back {
+  padding: 0;
+  border: none;
+  background: transparent;
+  margin-bottom: 39px;
+}
+
+.button-back {
+  transform: rotate(180deg);
 }
 
 .promo-slider .button {
   width: 192px;
 }
 
+.promo-slider h2 {
+  text-transform: uppercase;
+  margin-top: 23px;
+  margin-bottom: 6px;
+}
+
 .promo-button {
   background-color: var(--white-transparent);
   display: block;
   width: 135px;
+}
+
+.promo-row {
+  display: flex;
+  align-items: center;
+
+}
+
+.promo-row form {
+  margin-left: 79px;
 }
 
 /* Популярные товары */
@@ -465,6 +537,9 @@ img {
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
   width: 220px;
   height: 318px;
@@ -660,6 +735,7 @@ img {
 .footer-nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
