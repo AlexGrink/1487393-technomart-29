@@ -32,6 +32,7 @@
   --hover-dark-transparent: rgba(197, 197, 197, 0.3);
   --active-dark-transparent: rgba(169, 169, 169, 0.3);
   --lighter-grey: #f2f6f8;
+  --icon-blue: #3d546f;
 }
 
 /* Global */
@@ -161,11 +162,25 @@ img {
   border: none;
 }
 
+.search-form {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 11px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+}
+
 .search::placeholder {
   font-family: Cuprum;
   font-size: 18px;
   color: var(--basic-white);
   line-height: 24px;
+  padding-left: 40px;
 }
 
 .favourite,
@@ -175,16 +190,37 @@ img {
   height: 42px;
   width: 150px;
   color: var(--basic-white);
-  padding: 9px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
-.favourite {
-  padding-left: 43px;
-  padding-right: 24px;
+.favourite img {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 14px;
+  height: 16px;
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
 }
-
+.favourite,
 .cart {
+  position: relative;
   padding-left: 49px;
+}
+
+.cart img {
+  position: absolute;
+  top: 13px;
+  left: 26px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
 }
 
 .order-button {
@@ -193,6 +229,19 @@ img {
 
 .page-body__inner .cart {
   background-color: var(--basic-red);
+}
+.favourite:hover .favourite-icon {
+  opacity: 1;
+}
+.favourite:active .favourite-icon {
+  opacity: 0.3;
+}
+
+.cart:hover .cart-icon {
+  opacity: 1;
+}
+.cart:active .cart-icon {
+  opacity: 0.3;
 }
 
 .favourite:active {
@@ -271,6 +320,7 @@ img {
 }
 
 .contacts-phone {
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 270px;
@@ -280,6 +330,16 @@ img {
   line-height: 30px;
   font-weight: bold;
   border: 3px solid var(--basic-white);
+}
+.contacts-phone::before {
+  content: "";
+  position: absolute;
+  width: 17.51px;
+  height: 18.97px;
+  background-image: url("../img/icon-phone.svg");
+  background-position: center;
+  top: 10px;
+  left: 40px;
 }
 
 .login-button,
@@ -294,11 +354,22 @@ img {
 }
 
 .login-button {
+  position: relative;
   margin-left: 19px;
   margin-right: 10px;
   width: 121px;
   padding-left: 45px;
-
+}
+.login-icon {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 20px;
+  height: 17px;
+  background-image: url("../img/icon-loginAndExit.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .register-button {
@@ -310,10 +381,16 @@ img {
 .register-button:hover {
   color: var(--basic-red);
 }
+.login-button:hover .login-icon-path {
+  fill: var(--icon-blue);
+}
 
 .login-button:active,
 .register-button:active {
   color: var(--grey);
+}
+.login-button:active .login-icon-path {
+  fill: var(--grey);
 }
 
 .login-button:focus,
@@ -352,8 +429,6 @@ img {
   height: 55px;
   color: var(--basic-white);
   font-size: 18px;
-
-
 }
 
 .site-navigation-item a:hover {
@@ -370,7 +445,7 @@ img {
   color: var(--active-white);
 }
 
-.site-navigation>a:active {
+.site-navigation > a:active {
   height: 60px;
 }
 
@@ -383,7 +458,6 @@ img {
 .promo h2 {
   font-size: 36px;
   line-height: 36px;
-
 }
 
 .promo h3 {
@@ -415,10 +489,16 @@ img {
 
 .promo-item:first-child {
   background-color: var(--orange);
+  background-image: url("../img/promo-icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 213px 31px;
 }
 
 .promo-item:last-child {
   background-color: var(--orange2);
+  background-image: url("../img/promo-icon-5.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 32px;
 }
 
 .promo-item a {
@@ -427,14 +507,23 @@ img {
 
 .promo-item:nth-child(2) {
   background-color: var(--light-blue);
+  background-image: url("../img/promo-icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 194px 34px;
 }
 
 .promo-item:nth-child(3) {
   background-color: var(--special-pink);
+  background-image: url("../img/promo-icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 191px 31px;
 }
 
 .promo-item:nth-child(5) {
   background-color: var(--special-green);
+  background-image: url("../img/promo-icon-4.svg");
+  background-repeat: no-repeat;
+  background-position: 196px 26px;
 }
 
 .promo-item a:hover {
@@ -451,18 +540,30 @@ img {
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
-  padding-left: 24px;
-  padding-right: 20px;
   min-height: 266;
+  background-image: url("../img/promo-slider-perforators.jpg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
 }
 
+.slide2,
+.slide1 {
+  background-color: var(--slider-background);
+  box-sizing: border-box;
+  width: 620px;
+  height: 104px;
+  padding-top: 22px;
+}
 .slider-buttons {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 18px;
   margin-bottom: 39px;
   height: 40px;
+  padding-right: 20px;
 }
 
 .button-next,
@@ -483,8 +584,8 @@ img {
 
 .promo-slider h2 {
   text-transform: uppercase;
-  margin-top: 23px;
   margin-bottom: 6px;
+  margin-top: 0;
 }
 
 .promo-button {
@@ -496,7 +597,6 @@ img {
 .promo-row {
   display: flex;
   align-items: center;
-
 }
 
 .promo-row form {
@@ -555,7 +655,23 @@ img {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
-  padding-bottom: 21px;
+  padding-bottom: 22px;
+}
+
+.new-item {
+  position: relative;
+  padding-top: 29px;
+}
+.new-item::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/catalogue-new.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-item h3 {
@@ -566,6 +682,7 @@ img {
   height: 43px;
   font-family: "PT Sans";
   color: var(--basic-black);
+  margin: 0;
 }
 
 .catalog-item del {
@@ -578,7 +695,16 @@ img {
   font-family: "PT Sans";
   font-weight: bold;
   color: var(--basic-white);
-  background-color: var(--basic-red);
+  box-sizing: border-box;
+  display: block;
+  background-image: url("../img/Price-Shape.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 141px;
+  height: 38px;
+  padding: 10px 16px 10px 10px;
+  margin-left: 12px;
+  text-align: center;
 }
 
 .new-item h3 {
@@ -609,8 +735,16 @@ img {
 .services {
   background-color: var(--light-grey);
   margin-bottom: 70px;
+  min-height: 522px;
 }
-
+.services .container {
+  padding: 66px 10px 98px 10px;
+  position: relative;
+}
+.services-subtitle {
+  max-width: 400px;
+  margin-bottom: 72px;
+}
 .services-content {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -622,15 +756,26 @@ img {
 }
 
 .services-list {
-  display: inline-block;
   list-style: none;
   padding: 0;
   margin: 0;
   width: 240px;
+  position: relative;
+}
+.services-list::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/services-border.png");
+  width: 10px;
+  height: 279px;
+  right: 0;
+  top: -40px;
 }
 
 .services-list-item:not(.services-list-delivery) {
   background-color: var(--basic-dark-blue);
+  box-shadow: inset 0px 1px 0px #405069;
+  filter: drop-shadow(0px 1px 0px #293449);
 }
 
 .services-list-item:not(.services-list-delivery) a:hover {
@@ -640,7 +785,35 @@ img {
 .services-item {
   width: 620px;
 }
+.delivery::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/delivery-truck.png");
+}
 
+.guarantee::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/services-guarantee.png");
+}
+
+.credit::before {
+  content: "";
+  position: absolute;
+  width: 468px;
+  height: 261px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/services-credit.png");
+}
 .services-item p {
   font-family: "PT Sans";
 }
@@ -671,9 +844,23 @@ img {
   background-color: var(--basic-white);
 }
 
+.services-item p {
+  max-width: 275px;
+}
+.services-item img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 468px;
+  height: 261px;
+  background-image: url(../img/delivery-truck.png);
+  background-position: center;
+}
+
 /* Цвет заголовков "services и about" */
 .special-title {
   color: var(--basic-black);
+  margin-bottom: 25px;
 }
 
 /*about */
@@ -687,16 +874,28 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .about p {
   font-family: "PT Sans";
+  margin: 0;
 }
 
 .about-list-item {
   font-size: 18px;
+  position: relative;
+  margin-left: 37px;
 }
-
+.about-list-item::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 10px;
+  left: -38px;
+  background-image: url(../img/about-list-style.png);
+}
 .about .button {
   width: 220px;
 }
@@ -758,7 +957,6 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 .footer-nav-item {
@@ -797,8 +995,12 @@ site-navigation-item-special {
   font-size: 16px;
   line-height: 18px;
   margin: 0;
+  padding-top: 34px;
+  padding-bottom: 29px;
 }
-
+.footer-bottom p {
+  margin: 0;
+}
 .footer-bottom .container {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -838,7 +1040,29 @@ site-navigation-item-special {
 }
 
 .social-button {
+  display: block;
   background: linear-gradient(0deg, #212a3a, #212a3a);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #212a3a;
+  margin-right: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.vk {
+  background-image: url("../img/icon-vk.svg");
+  background-size: 26px 16px;
+}
+
+.facebook {
+  background-image: url("../img/icon-fb.svg");
+  background-size: 12px 22px;
+}
+
+.instagram {
+  background-image: url("../img/icon-insta.svg");
+  background-size: 21px 21px;
 }
 
 /* Catalog html */
@@ -967,7 +1191,6 @@ site-navigation-item-special {
   margin: 0;
   height: 38px;
   padding: 10px 18px;
-
 }
 
 .sorting {
@@ -981,7 +1204,6 @@ site-navigation-item-special {
 .sorting h2 {
   margin-left: 19px;
   margin-right: 140px;
-
 }
 
 .active-control {
@@ -1066,7 +1288,6 @@ site-navigation-item-special {
   grid-row-start: 4;
   grid-column-start: 2;
   grid-column-end: -1;
-
 }
 
 .goods-list {
