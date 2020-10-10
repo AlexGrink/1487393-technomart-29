@@ -34,7 +34,7 @@
           </form>
           <a class="favourite" href="#"><img class="favourite-icon" src="img/icon-bookmark.svg">Закладки: 0</a>
           <a class="cart" href="#"><img class="cart-icon" src="img/icon-cart.svg">Корзина: 0</a>
-          <button class="order-button" type="button"> Оформить заказ</button>
+          <a class="order-button">Оформить заказ</a>
         </div>
       </div>
       <div class="container">
@@ -46,7 +46,7 @@
           </p>
           <p class="contacts-text">
             <a class="contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </p>
           <div class="guest-buttons">
             <a class="login-button">
@@ -107,15 +107,17 @@
             </div>
             <!--Кнопки вперед и назад-->
             <div class="slider-buttons">
-              <button class="button-next" type="button"><img src="img/icon-left.svg" width="22" height="40"></button>
               <button class="button-back" type="button"><img src="img/icon-left.svg" width="22" height="40"></button>
+              <button class="button-next" type="button"><img src="img/icon-left.svg" width="22" height="40"></button>
             </div>
             <div class="promo-row">
               <a class="button" href="catalog.html">Открыть каталог</a>
               <!--Нижние кнопки на слайдере-->
-              <form>
-                <input type="radio" name="slider-radio" value="slide1">
-                <input type="radio" name="slider-radio" value="slide2" checked>
+              <form class="slider-radiobuttons">
+                <input class="visually-hidden slider-radio" type="radio" id="slider-radio-left" name="slider-radio" value="slide1">
+                <label for="slider-radio-left"></label>
+                <input class="visually-hidden slider-radio" type="radio" id="slider-radio-right" name="slider-radio" value="slide2" checked>
+                <label for="slider-radio-right"></label>
               </form>
             </div>
           </li>
@@ -139,27 +141,35 @@
         </div>
         <ul class="popular-list">
           <li class="popular-list-item catalog-item">
-            <img src="img/bosch9000.png" width="184" height="164" alt="Перфоратор синий с ручкой"><br>
+            <div class="catalog-img-block catalog-img-block-special">
+              <img src="img/bosch9000.png" width="184" height="164" alt="Перфоратор синий с ручкой">
+            </div>
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <del>32500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
           <li class="popular-list-item catalog-item new-item">
-            <img src="img/bosch3000.png" width="127" height="112" alt="Перфоратор синий с ручкой"><br>
+            <div class="catalog-img-block">
+              <img src="img/bosch3000.png" width="127" height="112" alt="Перфоратор синий с ручкой">
+            </div>
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
             <a class="price" href="">15500 Р.</a>
           </li>
           <li class="popular-list-item catalog-item">
-            <img src="img/bosch6000.png" width="144" height="128" alt="Перфоратор синий с ручкой"><br>
+            <div class="catalog-img-block">
+              <img src="img/bosch6000.png" width="144" height="128" alt="Перфоратор синий с ручкой">
+            </div>
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
           <li class="popular-list-item catalog-item new-item">
-            <img src="img/bosch2000.png" width="127" height="112" alt="Перфоратор синий с ручкой"><br>
+            <div class="catalog-img-block">
+              <img src="img/bosch2000.png" width="127" height="112" alt="Перфоратор синий с ручкой">
+            </div>
             <h3>Перфоратор BOSCH BFG 2000</h3>
-
+            <del class="hidden">Sd</del>
             <a class="price" href="">12500 Р.</a>
           </li>
         </ul>
@@ -168,7 +178,7 @@
       <section class="popular-brands">
         <div class="popular-header">
           <h2 class="title">Популярные производители</h2>
-          <a class="button" href="">все производители</a>
+          <a class="button brands-button" href="">все производители</a>
         </div>
         <ul class="brands-list">
           <li class="brands-list-item"><a href=""><img src="img/bosch-logo.png" width="220" height="145" alt="bosch">
@@ -238,10 +248,11 @@
     <div class="index-columns container">
       <section class="about">
         <h2 class="title special-title">КОМПАНИЯ «Техномарт»</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не
+        <p class="about-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+          строительства не
           оставит
           равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
+        <p class="about-text">Мы можем доставить ваш товар в самые отдаленные точки России!
           Техномарт работает со многими транспортными компаниями:</p>
         <ul class="about-list">
           <li class="about-list-item ">Деловые линии</li>
@@ -261,10 +272,10 @@
     </div>
   </main>
   <footer class="page-footer main-footer">
-    <div class="container">
+    <div class="container footer-top">
 
       <a href="#" class="technomart-logo">
-        <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
+        <img class="logo-bottom" src="img/logo-technomart.svg" width="138" height="23" alt="Логотип магазина Техномарт">
       </a>
       <ul class="footer-nav footer-nav-top">
 
@@ -297,12 +308,14 @@
           <li><a class="social-button instagram" href="instagram.com"></a>
           </li>
         </ul>
-        <p class="footer-text">Обратная связь:
-          <a href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-text">Разработано —
-          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-        </p>
+        <div class="footer-copyright">
+          <p class="footer-text">Обратная связь:
+            <a href="mail:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer-text">Разработано —
+            <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>

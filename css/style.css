@@ -113,16 +113,20 @@ img {
   margin: -1px;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /* Main navigation */
 .technomart-logo {
   margin: 0;
-
   box-sizing: border-box;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   width: 220px;
   height: 47px;
   padding: 12px 57px 15px 55px;
+
 }
 
 .technomart-logo:active {
@@ -130,13 +134,13 @@ img {
 }
 
 .main-header {
-  margin-bottom: 60px;
   background-image: url("../img/topbackground.png");
   background-color: var(--basic-strange);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   font-size: 18px;
   color: var(--basic-white);
   max-height: 320px;
+  margin-bottom: 59px;
 }
 
 .main-navigation {
@@ -148,7 +152,7 @@ img {
   height: 42px;
   background-color: var(--basic-dark);
   box-shadow: inset 0px -5px 0px var(--basic-dark);
-  margin-bottom: 46px;
+  margin-bottom: 45px;
 }
 
 .header-top .container {
@@ -156,7 +160,7 @@ img {
 }
 
 .search {
-  width: 269px;
+  width: 270px;
   height: 42px;
   background-color: var(--basic-dark);
   border: none;
@@ -176,12 +180,15 @@ img {
   opacity: 0.3;
   z-index: 1;
 }
+
 .search-form:hover .search-icon {
   opacity: 1;
 }
+
 .search-form:active .search-icon {
   opacity: 1;
 }
+
 .search-form:focus-within .search-svg-path {
   opacity: 1;
   fill: red;
@@ -193,6 +200,7 @@ img {
   color: var(--basic-white);
   line-height: 24px;
 }
+
 .search::-ms-clear {
   display: none;
 }
@@ -204,7 +212,7 @@ img {
   height: 42px;
   width: 150px;
   color: var(--basic-white);
-  padding-top: 9px;
+  padding-top: 10px;
   padding-bottom: 9px;
 }
 
@@ -219,10 +227,15 @@ img {
   background-position: center;
   opacity: 0.3;
 }
+
 .favourite,
 .cart {
   position: relative;
-  padding-left: 49px;
+  padding-left: 50px;
+}
+
+.favourite {
+  padding-left: 44px;
 }
 
 .cart img {
@@ -238,15 +251,23 @@ img {
 }
 
 .order-button {
-  padding-left: 19px;
+  border: none;
+  background-color: var(--basic-green);
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  padding-left: 5px;
 }
 
 .page-body__inner .cart {
   background-color: var(--basic-red);
 }
+
 .favourite:hover .favourite-icon {
   opacity: 1;
 }
+
 .favourite:active .favourite-icon {
   opacity: 0.3;
 }
@@ -254,6 +275,7 @@ img {
 .cart:hover .cart-icon {
   opacity: 1;
 }
+
 .cart:active .cart-icon {
   opacity: 0.3;
 }
@@ -282,16 +304,6 @@ img {
   background-color: var(--basic-white);
 }
 
-.order-button {
-  border: none;
-  text-transform: capitalize;
-  background-color: var(--basic-green);
-  font-family: Cuprum;
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-}
-
 .order-button:hover {
   background-color: var(--hover-green);
 }
@@ -301,14 +313,15 @@ img {
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
+  margin-top: 5px;
 }
 
 .header-middle {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 300px 1fr;
   gap: 20px;
   padding-left: 30px;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
 }
 
 .header-middle p {
@@ -339,12 +352,20 @@ img {
   box-sizing: border-box;
   width: 270px;
   height: 45px;
-  padding: 4px 42px 5px 71px;
+  padding: 5px 42px 0px 71px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   border: 3px solid var(--basic-white);
+  margin-right: -20px;
 }
+
+.contacts-text span {
+  display: block;
+  margin-left: 11px;
+  margin-top: 4px;
+}
+
 .contacts-phone::before {
   content: "";
   position: absolute;
@@ -352,14 +373,14 @@ img {
   height: 18.97px;
   background-image: url("../img/icon-phone.svg");
   background-position: center;
-  top: 10px;
-  left: 40px;
+  top: 11px;
+  left: 37px;
 }
 
 .login-button,
 .register-button {
   box-sizing: border-box;
-  padding: 12px;
+  padding: 13px;
   font-family: Cuprum;
   font-size: 21px;
   line-height: 21px;
@@ -372,8 +393,9 @@ img {
   margin-left: 19px;
   margin-right: 10px;
   width: 121px;
-  padding-left: 45px;
+  padding-left: 46px;
 }
+
 .login-icon {
   content: "";
   position: absolute;
@@ -395,6 +417,7 @@ img {
 .register-button:hover {
   color: var(--basic-red);
 }
+
 .login-button:hover .login-icon-path {
   fill: var(--icon-blue);
 }
@@ -403,6 +426,7 @@ img {
 .register-button:active {
   color: var(--grey);
 }
+
 .login-button:active .login-icon-path {
   fill: var(--grey);
 }
@@ -431,18 +455,27 @@ img {
 }
 
 .site-navigation-item {
+  width: 100%;
   height: 60px;
   align-content: center;
 }
 
 .site-navigation-item a {
-  text-align: center;
   display: block;
   box-sizing: border-box;
-  padding-top: 16px;
+  padding: 17px 28px;
   height: 55px;
   color: var(--basic-white);
   font-size: 18px;
+  text-align: center;
+}
+
+.site-navigation-item:first-child a {
+  margin-left: 25px
+}
+
+.site-navigation-item:last-child a {
+  margin-right: 25px;
 }
 
 .site-navigation-item a:hover {
@@ -459,7 +492,7 @@ img {
   color: var(--active-white);
 }
 
-.site-navigation > a:active {
+.site-navigation>a:active {
   height: 60px;
 }
 
@@ -562,6 +595,7 @@ img {
   padding-left: 24px;
 }
 
+
 .slide2,
 .slide1 {
   background-color: var(--slider-background);
@@ -570,6 +604,7 @@ img {
   height: 104px;
   padding-top: 22px;
 }
+
 .slider-buttons {
   display: flex;
   align-items: flex-start;
@@ -585,12 +620,42 @@ img {
   padding: 0;
   border: none;
   background: transparent;
-  margin-bottom: 39px;
 }
 
-.button-back {
+.button-next {
   transform: rotate(180deg);
+  margin-top: -3px;
+  /*почему она на 3 px ниже, чем button-back???? */
 }
+
+.slider-radiobuttons label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  background-position: 0 0;
+  border-radius: 50%;
+  margin-top: 17px;
+  margin-right: 7px;
+}
+
+
+.slider-radio:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--basic-red);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+
 
 .promo-slider .button {
   width: 192px;
@@ -638,14 +703,15 @@ img {
   align-items: center;
   background-color: var(--light-beige);
   height: 89px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   align-content: center;
   padding-left: 28px;
-  padding-right: 15px;
+  padding-right: 14px;
 }
 
 .popular-header .button {
   width: 192px;
+  margin-bottom: 4px;
 }
 
 .popular-list {
@@ -655,6 +721,7 @@ img {
   gap: 20px;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 }
 
 .catalog-item {
@@ -669,18 +736,35 @@ img {
   font-size: 17px;
   line-height: 18px;
   text-align: center;
-  padding-bottom: 22px;
+}
+
+
+.catalog-img-block {
+  box-sizing: border-box;
+  width: 220px;
+  height: 170px;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+.catalog-img-block-special {
+  padding-top: 4px;
+  padding-left: 10px;
 }
 
 .new-item {
   position: relative;
-  padding-top: 29px;
 }
+
+.new-item .catalog-img-block {
+  padding-top: 27px;
+}
+
 .new-item::before {
   content: "";
   position: absolute;
   right: 0;
-  top: 0;
+  top: -1px;
   width: 70px;
   height: 70px;
   background-image: url("../img/catalogue-new.png");
@@ -700,6 +784,7 @@ img {
 }
 
 .catalog-item del {
+  display: inline;
   font-family: "PT Sans";
   font-weight: bold;
   color: var(--special-grey);
@@ -717,8 +802,10 @@ img {
   width: 141px;
   height: 38px;
   padding: 10px 16px 10px 10px;
-  margin-left: 12px;
   text-align: center;
+  margin-bottom: 21px;
+  margin-left: 12px;
+  margin-top: 5px;
 }
 
 .new-item h3 {
@@ -729,6 +816,10 @@ img {
 /* Популярные производители */
 .popular-brands {
   margin-bottom: 70px;
+}
+
+.brands-button {
+  margin-right: 5px;
 }
 
 .brands-list {
@@ -751,14 +842,17 @@ img {
   margin-bottom: 70px;
   min-height: 522px;
 }
+
 .services .container {
   padding: 66px 10px 98px 10px;
   position: relative;
 }
+
 .services-subtitle {
   max-width: 400px;
-  margin-bottom: 72px;
+  margin-bottom: 69px;
 }
+
 .services-content {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -776,6 +870,7 @@ img {
   width: 240px;
   position: relative;
 }
+
 .services-list::after {
   content: "";
   position: absolute;
@@ -799,13 +894,14 @@ img {
 .services-item {
   width: 620px;
 }
+
 .delivery::before {
   content: "";
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 11px;
   background-image: url("../img/delivery-truck.png");
 }
 
@@ -814,8 +910,8 @@ img {
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 11px;
   background-image: url("../img/services-guarantee.png");
 }
 
@@ -824,12 +920,14 @@ img {
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 11px;
   background-image: url("../img/services-credit.png");
 }
+
 .services-item p {
   font-family: "PT Sans";
+  margin-top: 29px;
 }
 
 .services-list-item a {
@@ -861,6 +959,7 @@ img {
 .services-item p {
   max-width: 275px;
 }
+
 .services-item img {
   position: absolute;
   bottom: 0px;
@@ -874,7 +973,7 @@ img {
 /* Цвет заголовков "services и about" */
 .special-title {
   color: var(--basic-black);
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 /*about */
@@ -888,58 +987,80 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.about p {
+
+.about-text {
   font-family: "PT Sans";
   margin: 0;
+}
+
+.about-text:first-of-type {
+  margin-bottom: 26px;
+}
+
+.about-text:nth-of-type(2) {
+  width: 400px;
+  margin-bottom: 2px;
 }
 
 .about-list-item {
   font-size: 18px;
   position: relative;
   margin-left: 37px;
+  margin-bottom: 11px;
 }
+
+
 .about-list-item::before {
   content: "";
   position: absolute;
   width: 25px;
   height: 2px;
-  top: 10px;
-  left: -38px;
+  top: 12px;
+  left: -37px;
   background-image: url(../img/about-list-style.png);
 }
+
 .about .button {
   width: 220px;
 }
 
 .contacts {
-  width: 320px;
+  width: 300px;
   justify-self: end;
+}
+
+.contacts .title {
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .contacts-map {
   background-color: var(--beige);
+  margin-bottom: 18px;
 }
 
 .contacts p {
   font-family: "PT Sans";
+  margin: 0;
+  width: 180px;
+  margin-bottom: 32px;
 }
 
 .contacts .button {
+
   width: 300px;
+  margin: 0;
 }
 
 /* Footer */
 .page-footer .technomart-logo {
-  height: 67px;
-  padding-top: 20px;
-}
-
-.page-footer .technomart-logo img {
-  width: 138px;
-  height: 23px;
+  height: 68px;
+  padding: 0;
+  padding-top: 19px;
+  text-align: center;
 }
 
 .page-footer .container {
@@ -952,11 +1073,17 @@ img {
   color: var(--basic-white);
 }
 
+.footer-top {
+  padding-bottom: 55px;
+}
+
 .footer-contacts {
   max-width: 325px;
   font-size: 18px;
   color: var(--special-white);
   margin: 0;
+  margin-top: -4px;
+  margin-left: 2px;
 }
 
 .footer-contacts a {
@@ -967,14 +1094,21 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 500px;
 }
 
 .footer-nav-item {
   font-size: 18px;
+  margin-right: 59px;
+}
+
+.footer-nav-top {
+  margin-left: 44px;
+  margin-top: 37px;
+  margin-bottom: 34px;
 }
 
 .footer-nav-top a {
@@ -982,7 +1116,8 @@ img {
 }
 
 .footer-nav-bottom {
-  justify-content: space-around;
+  margin-left: 67px;
+
 }
 
 .footer-nav-bottom a {
@@ -1012,21 +1147,35 @@ site-navigation-item-special {
   padding-top: 34px;
   padding-bottom: 29px;
 }
+
 .footer-bottom p {
   margin: 0;
 }
+
 .footer-bottom .container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .copyright {
   max-width: 230px;
 }
 
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+
+}
+
 .footer-text {
-  max-width: 150px;
   margin: 0;
+  padding: 0;
+  max-width: 137px;
+}
+
+.footer-text:first-of-type {
+  margin-right: 50px;
 }
 
 .footer-text a {
@@ -1051,6 +1200,7 @@ site-navigation-item-special {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 77px;
 }
 
 .social-button {
@@ -1064,6 +1214,7 @@ site-navigation-item-special {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .vk {
   background-image: url("../img/icon-vk.svg");
   background-size: 26px 16px;
