@@ -532,6 +532,7 @@ img {
   max-width: 300px;
   min-height: 123px;
   padding-left: 22px;
+  overflow: hidden;
 }
 
 .promo-item:first-child {
