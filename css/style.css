@@ -555,6 +555,17 @@ img {
   background-image: url("../img/promo-icon-1.svg");
   background-repeat: no-repeat;
   background-position: 213px 31px;
+  position: relative;
+}
+
+.promo-item:first-child::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
+  background-image: url(../img/catalogue-new.png);
 }
 
 .promo-item:last-child {
@@ -603,7 +614,6 @@ img {
   grid-row-start: 2;
   grid-row-end: 4;
   background-color: var(--basic-dark-blue);
-  min-height: 266;
   background-image: url("../img/promo-slider-perforators.jpg");
   background-repeat: no-repeat;
   display: flex;
@@ -797,6 +807,7 @@ img {
   font-family: "PT Sans";
   color: var(--basic-black);
   margin: 0;
+  margin-top: 2px;
 }
 
 .catalog-item del {
@@ -817,7 +828,7 @@ img {
   background-repeat: no-repeat;
   width: 141px;
   height: 38px;
-  padding: 10px 16px 10px 10px;
+  padding: 10px 19px 10px 10px;
   text-align: center;
   margin-bottom: 21px;
   margin-left: 12px;
@@ -827,6 +838,7 @@ img {
 .new-item h3 {
   width: 157px;
   height: 41px;
+  margin-top: 0px;
 }
 
 /* Популярные производители */
@@ -1404,29 +1416,214 @@ site-navigation-item-special {
   text-transform: uppercase;
 }
 
+.filter-title {
+  box-sizing: border-box;
+  margin: 0;
+  height: 38px;
+  padding: 10px 18px;
+}
+
 .filter-fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 13px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 26px;
+}
+
+.filter-fieldset:last-of-type {
+  border-bottom: none;
+}
+
+.filter-fieldset legend {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.range-filter {
+  margin-top: 11px;
+}
+
+.range-controls {
+  position: relative;
+  background-color: #F7F3EC;
+  height: 80px;
+  width: 220px;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.scale {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  width: 180px;
+  height: 2px;
+  background-color: #D7DCDE;
+}
+
+.bar {
+  width: 152px;
+  height: 2px;
+  background-image: url("../img/price-bar.png");
+}
+
+.toggle {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background-image: url("../img/filter-button.svg");
+  top: 30px;
+}
+
+.min-price,
+.max-price {
+  display: inline-block;
+  border: none;
+  outline: none;
+  width: 95px;
+  height: 38px;
+  background-color: #F7F3EC;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.min-price,
+.max-price .min-price label {
+  display: inline-block;
+  text-align: center;
+
+}
+
+.price-controls {
+  margin-top: 9px;
+  font-size: 0;
+  /*Убрал пробелы перед и после "—"*/
+}
+
+.price-controls span {
+  display: inline-block;
+  width: 30px;
+  line-height: 18px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.filter-fieldset-brands {
+  margin-top: 15px;
+  padding-bottom: 8px;
+}
+
+.filter-fieldset-brands legend {
+  margin-bottom: 17.5px;
 }
 
 .filter-fieldset ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+}
+
+.filter-list li {
+  margin-bottom: 20px;
+}
+
+.filter-list label {
+  margin-left: 35px;
+}
+
+.filter-list label {
+  position: relative;
+}
+
+.filter-input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -2px;
+  width: 27px;
+  height: 23px;
+  background: url("../img/checkbox-off.svg") no-repeat;
+}
+
+.filter-input-checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -2px;
+  width: 27px;
+  height: 23px;
+  background-color: white;
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-fieldset-power {
+  margin-top: 17px;
+  padding-bottom: 14px;
+
+}
+
+.filter-fieldset-power legend {
+  margin-bottom: 24px;
+}
+
+.filter-fieldset-power li {
+  margin-bottom: 22.5px;
+}
+
+.filter-input-radio+label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background: url("../img/radio-off.svg") no-repeat;
+}
+
+.filter-input-radio:checked+label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background-image: url("../img/radio-on.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.filter-submit {
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  width: 220px;
+  height: 38px;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .filters {
   width: 220px;
-  grid-row-start: 4;
-  grid-column: 1/2;
-}
-
-.filter-title {
-  box-sizing: border-box;
   grid-row-start: 3;
   grid-column-start: 1;
-  margin: 0;
-  height: 38px;
-  padding: 10px 18px;
 }
 
 .sorting {
@@ -1508,7 +1705,18 @@ site-navigation-item-special {
   box-shadow: inset 0px -3px 0px #367315;
   padding: 10px;
   padding-left: 23px;
+  position: relative;
+}
 
+.buy-button::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  left: 30px;
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.3;
 }
 
 .favourite-button {
@@ -1541,7 +1749,8 @@ site-navigation-item-special {
 
 /* GOODS */
 .goods {
-  grid-row-start: 4;
+  margin-top: 66px;
+  grid-row-start: 3;
   grid-column-start: 2;
   grid-column-end: -1;
 }
@@ -1554,7 +1763,7 @@ site-navigation-item-special {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 8px;
+
 }
 
 .goods-list .new-item .catalog-img-block {

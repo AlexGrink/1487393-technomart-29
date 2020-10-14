@@ -32,8 +32,12 @@
             <input class="search" type="search" id="search" name="search" placeholder="Поиск:">
             <button type="submit" class="visually-hidden"></button>
           </form>
-          <a class="favourite" href="#"><img class="favourite-icon" src="img/icon-bookmark.svg">Закладки: 0</a>
-          <a class="cart catalog-cart" href="#"><img class="cart-icon" src="img/icon-cart.svg">Корзина: 10</a>
+          <a class="favourite" href="#">
+            <img class="favourite-icon" src="img/icon-bookmark.svg" alt="иконка">Закладки:0
+          </a>
+          <a class="cart catalog-cart" href="#">
+            <img class="cart-icon" src="img/icon-cart.svg" alt="иконка">Корзина:10
+          </a>
           <a class="order-button">Оформить заказ</a>
         </div>
       </div>
@@ -96,45 +100,74 @@
         <li class="breadcrumbs-item">Перфораторы</li>
       </ul>
       <h1 class="title main-title">Перфораторы</h1>
-      <h2 class="filter-title">Фильтр:</h2>
       <section class="filters">
-        <form class="filter">
+        <h2 class="filter-title">Фильтр:</h2>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filter-fieldset">
             <legend>Цена:</legend>
-            <!-- Будет Range с 2 курсорами -->
-            <input type="range">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" style="left:18.5px" tabindex="0"></div>
+                <div class="toggle toggle-max" style="left:160px" tabindex="0"></div>
+              </div>
+              <div class="price-controls">
+                <input class="min-price" type="text" name="min-price" value="0">
+                <span>—</span>
+                <input class="max-price" type="text" name="max-price" value="30000">
+              </div>
+            </div>
           </fieldset>
-          <fieldset class="filter-fieldset">
+          <fieldset class="filter-fieldset filter-fieldset-brands">
             <legend>Производители:</legend>
             <ul class="filter-list">
-              <li><input class="" type="checkbox" name="Bosch" id="Bosch" checked>Bosch</li>
-              <li><input class="" type="checkbox" name="Interskol" id="interskol">Интерскол</li>
-              <li><input class="" type="checkbox" name="Makita" id="Makita" checked>Makita</li>
-              <li><input class="" type="checkbox" name="Dewalt" id="Dewalt">Dewalt</li>
-              <li><input class="" type="checkbox" name="Hitachi" id="Hitachi">Hitachi</li>
+              <li>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Bosch" id="Bosch" checked>
+                <label for="Bosch">Bosch</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Interskol" id="interskol">
+                <label for="interskol">Интерскол</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Makita" id="Makita" checked>
+                <label for="Makita">Makita</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="Dewalt" id="Dewalt">
+                <label for="Dewalt">Dewalt</label>
+              </li>
+              <li><input class="visually-hidden filter-input-checkbox" type="checkbox" name="Hitachi" id="Hitachi">
+                <label for="Hitachi">Hitachi</label>
+              </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-fieldset">
+          <fieldset class="filter-fieldset filter-fieldset-power">
             <legend>Питание:</legend>
-            <ul>
-              <li><input type="radio" name="wiring" id="wireless" checked>Аккумуляторные</li>
-              <li><input type="radio" name="wiring" id="wired">Сетевые</li>
+            <ul class="filter-list">
+              <li><input class="visually-hidden filter-input-radio" type="radio" name="wiring" id="wireless" checked>
+                <label for="wireless">Аккумуляторные</label>
+              </li>
+              <li>
+                <input class="visually-hidden filter-input-radio" type="radio" name="wiring" id="wired">
+                <label for="wired">Сетевые</label>
+              </li>
             </ul>
           </fieldset>
+          <input class="filter-submit" type="submit" value="ПОКАЗАТЬ">
         </form>
       </section>
-
       <section class="sorting">
         <h2>Сортировка:</h2>
         <label class="sorting-control active-control">По цене
-          <input type="radio" name="sorting control" class="sorting-control-input visually-hidden" checked>
+          <input type="radio" name="sorting control" class="visually-hidden sorting-control-input visually-hidden"
+            checked>
         </label>
-
         <label class="sorting-control">По типу
-          <input type="radio" name="sorting control" class="sorting-control-input visually-hidden">
+          <input class="visually-hidden sorting-control-input" type="radio" name="sorting control">
         </label>
-
-
         <label class="sorting-control">По функционалу
           <input type="radio" name="sorting control" class="sorting-control-input visually-hidden">
         </label>
@@ -150,12 +183,7 @@
             <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
           </svg>
         </label>
-
-
-
-        <!--Сортировка вниз-->
       </section>
-
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="goods-list">
