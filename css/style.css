@@ -864,6 +864,14 @@ img {
   height: 145px;
 }
 
+.brands-list-item:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.brands-list-item:active {
+  opacity: 0.5;
+}
+
 /* Сервисы */
 .services {
   background-color: var(--light-grey);
@@ -1763,7 +1771,6 @@ site-navigation-item-special {
   list-style: none;
   padding: 0;
   margin: 0;
-
 }
 
 .goods-list .new-item .catalog-img-block {
@@ -1837,4 +1844,108 @@ site-navigation-item-special {
 .about-goods p {
   margin: 0;
   max-width: 915px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.modal-writeus {
+  width: 620px;
+  height: 430px;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+  border-bottom: 112px solid #F4F4F4;
+  padding: 40px 80px;
+  font-size: 18px;
+}
+
+.modal-close {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  right: 11px;
+  top: 14px;
+  background-image: url(../img/icon-close.svg);
+  width: 21px;
+  height: 21px;
+
+}
+
+.modal-map .modal-close {
+  top: 10px;
+  right: 10px;
+}
+
+.modal-writeus form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-writeus label {
+  width: 220px;
+}
+
+.modal-writeus label:first-of-type {
+  margin-right: 20px;
+  margin-left: 0px;
+  margin-bottom: 2px;
+}
+
+.modal-writeus input,
+.modal-writeus textarea {
+  font-family: "PT Sans";
+  outline: none;
+  color: var(--grey);
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 13px;
+  border: 2px solid var(--grey);
+  margin-top: 10px;
+  margin-bottom: 12px;
+  line-height: 24px;
+}
+
+.modal-writeus input {
+  width: 220px;
+  height: 38px;
+  padding: 7px 12px;
+
+}
+
+.modal-writeus textarea {
+  resize: none;
+  width: 460px;
+  height: 114px;
+  padding-left: 12px;
+  padding-top: 6.29px;
+}
+
+.modal .button {
+  position: absolute;
+  bottom: -75px;
+  left: 80px;
+  width: 460px;
+}
+
+.modal-map {
+  width: 943px;
+  height: 449px;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+  overflow: hidden;
+}
+
+.modal-map iframe {
+  border: none;
 }
