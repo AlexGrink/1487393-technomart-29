@@ -8,18 +8,18 @@ const modalMapClose = modalMap.querySelector(`.modal-close`);
 const writeUsClose = modalWriteUs.querySelector(`.modal-close`);
 
 smallMap.addEventListener(`click`, () => {
-  modalMap.classList.remove(`visually-hidden`);
+  modalMap.hidden=false;
 });
 
 modalMapClose.addEventListener(`click`, () => {
-  modalMap.classList.add(`visually-hidden`);
+  modalMap.hidden=true;
 });
 
 buttonModalContact.addEventListener(`click`, () => {
-  modalWriteUs.classList.remove(`visually-hidden`);
+  modalWriteUs.hidden=false;
 });
 
 writeUsClose.addEventListener(`click`, () => {
-  modalWriteUs.classList.add(`visually-hidden`);
+  modalWriteUs.hidden=true;
 });
 
