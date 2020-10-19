@@ -847,7 +847,7 @@ img {
   color: var(--basic-white);
   box-sizing: border-box;
   display: block;
-  background-image: url("../img/price-shape.svg");
+  background-image: url("../img/price.svg");
   background-position: center;
   background-repeat: no-repeat;
   width: 141px;
