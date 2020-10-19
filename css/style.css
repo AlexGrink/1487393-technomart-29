@@ -41,7 +41,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: Cuprum, "Pt Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -83,7 +83,7 @@ img {
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
-  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
 }
 
 .button:hover {
@@ -202,7 +202,7 @@ img {
 }
 
 .search::placeholder {
-  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   color: var(--basic-white);
   line-height: 24px;
@@ -261,7 +261,7 @@ img {
 .order-button {
   border: none;
   background-color: var(--basic-green);
-  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -399,7 +399,7 @@ img {
 .register-button {
   box-sizing: border-box;
   padding: 13px;
-  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: var(--basic-white);
@@ -828,7 +828,7 @@ img {
   font-weight: bold;
   width: 185px;
   height: 43px;
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   color: var(--basic-black);
   margin: 0;
   margin-top: 2px;
@@ -836,13 +836,13 @@ img {
 
 .catalog-item del {
   display: inline;
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   color: var(--special-grey);
 }
 
 .price {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   color: var(--basic-white);
   box-sizing: border-box;
@@ -920,7 +920,7 @@ img {
 }
 
 .services p {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .services-list {
@@ -986,7 +986,7 @@ img {
 }
 
 .services-item p {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   margin-top: 29px;
 }
 
@@ -1042,7 +1042,7 @@ img {
 
 
 .about-text {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   margin: 0;
 }
 
@@ -1093,7 +1093,7 @@ img {
 }
 
 .contacts p {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   margin: 0;
   width: 180px;
   margin-bottom: 32px;
@@ -1365,11 +1365,11 @@ site-navigation-item-special {
 /* main */
 
 .wrapper {
-  font-family: "PT Sans", Cuprum, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .title {
-  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-family: Cuprum, Arial, sans-serif;
 }
 
 /* Grid */
