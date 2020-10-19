@@ -41,7 +41,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: Cuprum, "Pt Sans", sans-serif;
+  font-family: Cuprum, "Pt Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -83,7 +83,7 @@ img {
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
-  font-family: Cuprum, "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
 }
 
 .button:hover {
@@ -202,7 +202,7 @@ img {
 }
 
 .search::placeholder {
-  font-family: "Cuprum", "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
   font-size: 18px;
   color: var(--basic-white);
   line-height: 24px;
@@ -261,7 +261,7 @@ img {
 .order-button {
   border: none;
   background-color: var(--basic-green);
-  font-family: Cuprum, "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -399,7 +399,7 @@ img {
 .register-button {
   box-sizing: border-box;
   padding: 13px;
-  font-family: Cuprum, "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: var(--basic-white);
@@ -828,7 +828,7 @@ img {
   font-weight: bold;
   width: 185px;
   height: 43px;
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   color: var(--basic-black);
   margin: 0;
   margin-top: 2px;
@@ -836,13 +836,13 @@ img {
 
 .catalog-item del {
   display: inline;
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   font-weight: bold;
   color: var(--special-grey);
 }
 
 .price {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   font-weight: bold;
   color: var(--basic-white);
   box-sizing: border-box;
@@ -920,7 +920,7 @@ img {
 }
 
 .services p {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
 }
 
 .services-list {
@@ -986,7 +986,7 @@ img {
 }
 
 .services-item p {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   margin-top: 29px;
 }
 
@@ -1052,7 +1052,7 @@ img {
 
 
 .about-text {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   margin: 0;
 }
 
@@ -1103,7 +1103,7 @@ img {
 }
 
 .contacts p {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   margin: 0;
   width: 180px;
   margin-bottom: 32px;
@@ -1117,7 +1117,7 @@ img {
 
 /* Footer */
 .page-footer .technomart-logo {
-  height: 68px;
+  height: 67px;
   padding: 0;
   padding-top: 19px;
   text-align: center;
@@ -1134,7 +1134,7 @@ img {
 }
 
 .footer-top {
-  padding-bottom: 55px;
+  padding-bottom: 53px;
 }
 
 .footer-contacts {
@@ -1375,11 +1375,11 @@ site-navigation-item-special {
 /* main */
 
 .wrapper {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
 }
 
 .title {
-  font-family: "Cuprum", "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
 }
 
 /* Grid */
@@ -1540,7 +1540,6 @@ site-navigation-item-special {
 .price-controls {
   margin-top: 9px;
   font-size: 0;
-  /*Убрал пробелы перед и после "—"*/
 }
 
 .price-controls span {
@@ -1671,17 +1670,14 @@ site-navigation-item-special {
   margin-right: 140px;
 }
 
-.active-control {
-  color: var(--basic-red);
+.sorting-control {
+  border-bottom: 1px dotted var(--basic-red);
 }
 
 .sorting-control:first-of-type {
   margin-right: 70px;
 }
 
-.sorting-control:not(.active-control) {
-  border-bottom: 1px dotted var(--basic-red);
-}
 
 .sorting-control:nth-of-type(3) {
   margin-left: 66px;
@@ -1695,11 +1691,6 @@ site-navigation-item-special {
 .sorting-control:hover {
   color: var(--basic-black);
   border-bottom: 1px solid var(--basic-red);
-  opacity: 1;
-}
-
-.active-sorting2 .sorting-svg-path {
-  fill: var(--basic-red)
 }
 
 .ascending-button {
@@ -1713,6 +1704,16 @@ site-navigation-item-special {
 .ascending-button:hover .sorting-svg-path,
 .descending-button:hover .sorting-svg-path {
   fill: var(--basic-black);
+}
+
+.sorting-control-input:checked+label {
+  color: var(--basic-red);
+  border-bottom: none;
+  opacity: 1;
+}
+
+.direction-input:checked~svg>path {
+  fill: red;
 }
 
 /*Catalog*/
@@ -1743,7 +1744,7 @@ site-navigation-item-special {
   box-sizing: border-box;
   font-size: 14px;
   line-height: 18px;
-  font-family: Cuprum, "sans-serif";
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
   border-radius: 2px;
   text-transform: uppercase;
   margin-top: 10px;
@@ -1887,7 +1888,8 @@ site-navigation-item-special {
 
 .about-goods p {
   margin: 0;
-  max-width: 915px;
+  max-width: 907px;
+  height: 74px;
 }
 
 .modal {
@@ -1948,7 +1950,7 @@ site-navigation-item-special {
 
 .modal-writeus input,
 .modal-writeus textarea {
-  font-family: "PT Sans", "sans-serif";
+  font-family: "PT Sans", Cuprum, Arial, sans-serif;
   outline: none;
   color: var(--grey);
   border-radius: 2px;
@@ -1964,7 +1966,6 @@ site-navigation-item-special {
   width: 220px;
   height: 38px;
   padding: 7px 12px;
-
 }
 
 .modal-writeus textarea {
@@ -1975,7 +1976,7 @@ site-navigation-item-special {
   padding-top: 6.29px;
 }
 
-.modal .button {
+.modal .modal-submit {
   position: absolute;
   bottom: -75px;
   left: 80px;
@@ -1992,4 +1993,52 @@ site-navigation-item-special {
 
 .modal-map iframe {
   border: none;
+}
+
+.modal-cart {
+  width: 620px;
+  height: 282.43px;
+  box-sizing: border-box;
+  border-top: 7px solid var(--basic-red);
+  border-bottom: 112px solid #F1F1F1;
+  color: var(--basic-black);
+}
+
+.modal-cart h3 {
+  width: 420px;
+  position: relative;
+  margin-left: 177px;
+  margin-top: 67px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: Cuprum, "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.modal-cart h3::before {
+  content: "";
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  background-image: url("../img/icon-mark.svg");
+  top: -19px;
+  left: -96px;
+}
+
+.modal-cart-buttons {
+  position: absolute;
+  bottom: -75px;
+  left: 114px;
+}
+
+.modal-cart-button {
+  display: inline-block;
+  width: 192px;
+  height: 38px;
+  margin-right: 6px;
+}
+
+.modal-cart-button:last-of-type {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }

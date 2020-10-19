@@ -161,24 +161,26 @@
       </section>
       <section class="sorting">
         <h2>Сортировка:</h2>
-        <label class="sorting-control active-control">По цене
-          <input type="radio" name="sorting control" class="visually-hidden sorting-control-input visually-hidden"
-            checked>
-        </label>
-        <label class="sorting-control">По типу
-          <input class="visually-hidden sorting-control-input" type="radio" name="sorting control">
-        </label>
-        <label class="sorting-control">По функционалу
-          <input type="radio" name="sorting control" class="sorting-control-input visually-hidden">
-        </label>
-        <label class="ascending-button active-sorting2">
-          <input class="visually-hidden" type="radio" name="up-down"> <svg width="11" height="10" viewBox="0 0 11 10"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <input class="visually-hidden sorting-control-input" type="radio" id="sorting-price" name="sorting-control"
+          checked>
+        <label class="sorting-control" for="sorting-price">По цене</label>
+
+        <input class="visually-hidden sorting-control-input" id="sorting-type" type="radio" name="sorting-control">
+        <label class="sorting-control" for="sorting-type">По типу</label>
+
+        <input class="visually-hidden sorting-control-input" type="radio" id="sorting-functional"
+          name="sorting-control">
+        <label for="sorting-functional" class="sorting-control">По функционалу</label>
+
+        <label class="ascending-button">
+          <input class="visually-hidden direction-input" type="radio" name="direction-input" checked>
+          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
           </svg>
         </label>
         <label class="descending-button">
-          <input class="visually-hidden" type="radio" name="up-down">
+          <input class="visually-hidden direction-input" type="radio" name="direction-input">
           <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
           </svg>
@@ -187,109 +189,109 @@
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="goods-list">
-          <li class="catalog-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch6000.png" width="144" height="128" alt="синий перфоратор" />
+              <img src="img/bosch6000.jpg" width="144" height="128" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
-          <li class="catalog-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch6000.png" width="144" height="128" alt="синий перфоратор" />
+              <img src="img/bosch6000.jpg" width="144" height="128" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
-          <li class="catalog-item new-item">
-            <div class="catalog-img-block">
+          <li class=" catalog-item inner-catalog-item new-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
-            <div class="catalog-img-block visually-hidden">
-              <img src="img/bosch6000.png" width="144" height="128" alt="синий перфоратор" />
+            <div class="catalog-img-block">
+              <img src="img/bosch6000.jpg" width="144" height="128" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
-          <li class="catalog-item new-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item new-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch3000.png" width="127" height="112" alt="синий перфоратор" />
+              <img src="img/bosch3000.jpg" width="127" height="112" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
             <a class="price" href="">15500 Р.</a>
           </li>
-          <li class="catalog-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch6000.png" width="144" height="128" alt="синий перфоратор" />
+              <img src="img/bosch6000.jpg" width="144" height="128" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
-          <li class="catalog-item new-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item new-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch2000.png" width="127" height="112" alt="синий перфоратор" />
+              <img src="img/bosch2000.jpg" width="127" height="112" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 2000</h3>
             <del class="hidden"></del>
             <a class="price" href="">12500 Р.</a>
           </li>
-          <li class="catalog-item new-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item new-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch3000.png" width="127" height="112" alt="синий перфоратор" />
+              <img src="img/bosch3000.jpg" width="127" height="112" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
             <a class="price" href="">15500 Р.</a>
           </li>
-          <li class="catalog-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch6000.png" width="144" height="128" alt="синий перфоратор" />
+              <img src="img/bosch6000.jpg" width="144" height="128" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
             <a class="price" href="">25500 Р.</a>
           </li>
-          <li class="catalog-item new-item">
-            <div class="visually-hidden">
+          <li class=" catalog-item inner-catalog-item new-item">
+            <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
             </div>
             <div class="catalog-img-block">
-              <img src="img/bosch2000.png" width="127" height="112" alt="синий перфоратор" />
+              <img src="img/bosch2000.jpg" width="127" height="112" alt="синий перфоратор" />
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 2000</h3>
             <del class="hidden"></del>
@@ -374,19 +376,15 @@
     </div>
   </footer>
 
-  <section class="modal modal-writeus visually-hidden">
-    <button class="modal-close">x</button>
-    <!--Здесь будут формы-->
-    <button class="button" type="button">Отправить</button>
-
+  <section class="modal modal-cart" hidden>
+    <button class="modal-close"></button>
+    <h3>Товар добавлен в корзину!</h3>
+    <div class="modal-cart-buttons">
+      <a class="modal-cart-button button">Оформить заказ</a>
+      <a class="modal-cart-button button">Продолжить покупки</a>
+    </div>
   </section>
-
-  <section class="modal modal-map visually-hidden">
-    <img src="img/map-big.jpg" width="943" height="449" alt=" map">
-    <button class="modal-close">x</button>
-  </section>
-
-
+  <script src="js/catalog-modal.js"></script>
 </body>
 
 </html>
