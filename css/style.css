@@ -83,7 +83,7 @@ img {
   text-align: center;
   padding: 10px;
   text-transform: uppercase;
-  font-family: Cuprum;
+  font-family: Cuprum, "sans-serif";
 }
 
 .button:hover {
@@ -170,6 +170,8 @@ img {
   background-color: var(--basic-dark);
   border: none;
   padding-left: 42px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .search-form {
@@ -200,10 +202,11 @@ img {
 }
 
 .search::placeholder {
-  font-family: Cuprum;
+  font-family: "Cuprum", "sans-serif";
   font-size: 18px;
   color: var(--basic-white);
   line-height: 24px;
+  opacity: 1;
 }
 
 .search::-ms-clear {
@@ -258,7 +261,7 @@ img {
 .order-button {
   border: none;
   background-color: var(--basic-green);
-  font-family: Cuprum;
+  font-family: Cuprum, "sans-serif";
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -396,7 +399,7 @@ img {
 .register-button {
   box-sizing: border-box;
   padding: 13px;
-  font-family: Cuprum;
+  font-family: Cuprum, "sans-serif";
   font-size: 21px;
   line-height: 21px;
   background-color: var(--basic-white);
@@ -418,7 +421,7 @@ img {
   left: 19px;
   width: 20px;
   height: 17px;
-  background-image: url("../img/icon-loginAndExit.svg");
+  background-image: url("../img/icon-login.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -613,12 +616,12 @@ img {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
-  background-color: var(--basic-dark-blue);
-  background-image: url("../img/promo-slider-perforators.jpg");
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   padding-left: 24px;
+  overflow: hidden;
+  position: relative;
 }
 
 
@@ -629,6 +632,28 @@ img {
   width: 620px;
   height: 104px;
   padding-top: 22px;
+}
+
+.slide2::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 266px;
+  background-image: url(../img/promo-slider-perforators.jpg);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.slide1::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 266px;
+  background-image: url(../img/promo-slider-drills.jpg);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .slider-buttons {
@@ -651,7 +676,6 @@ img {
 .button-next {
   transform: rotate(180deg);
   margin-top: -3px;
-  /*почему она на 3 px ниже, чем button-back???? */
 }
 
 .slider-radiobuttons label {
@@ -804,7 +828,7 @@ img {
   font-weight: bold;
   width: 185px;
   height: 43px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   color: var(--basic-black);
   margin: 0;
   margin-top: 2px;
@@ -812,18 +836,18 @@ img {
 
 .catalog-item del {
   display: inline;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   font-weight: bold;
   color: var(--special-grey);
 }
 
 .price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   font-weight: bold;
   color: var(--basic-white);
   box-sizing: border-box;
   display: block;
-  background-image: url("../img/Price-Shape.svg");
+  background-image: url("../img/price-shape.svg");
   background-position: center;
   background-repeat: no-repeat;
   width: 141px;
@@ -896,7 +920,7 @@ img {
 }
 
 .services p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
 }
 
 .services-list {
@@ -905,6 +929,7 @@ img {
   margin: 0;
   width: 240px;
   position: relative;
+  margin-top: 2px;
 }
 
 .services-list::after {
@@ -917,13 +942,12 @@ img {
   top: -40px;
 }
 
-.services-list-item:not(.services-list-delivery) {
+.services-list-item:not(.services-list-active) {
   background-color: var(--basic-dark-blue);
-  box-shadow: inset 0px 1px 0px #405069;
-  filter: drop-shadow(0px 1px 0px #293449);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
 }
 
-.services-list-item:not(.services-list-delivery) a:hover {
+.services-list-item:not(.services-list-active):hover {
   background-color: var(--basic-dark);
 }
 
@@ -962,7 +986,7 @@ img {
 }
 
 .services-item p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   margin-top: 29px;
 }
 
@@ -979,17 +1003,17 @@ img {
   padding: 13.5px 22px 17.5px;
 }
 
-.services-list-item:not(.services-list-delivery) a {
+.services-list-item:not(.services-list-active) a {
   color: var(--basic-white);
 }
 
-.services-list-delivery {
+.services-list-active {
   background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px #FFFFFF;
 }
 
-.services-list-delivery a {
+.services-list-active a {
   color: var(--basic-dark-blue);
-  background-color: var(--basic-white);
 }
 
 .services-item p {
@@ -1028,7 +1052,7 @@ img {
 
 
 .about-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   margin: 0;
 }
 
@@ -1079,7 +1103,7 @@ img {
 }
 
 .contacts p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   margin: 0;
   width: 180px;
   margin-bottom: 32px;
@@ -1153,7 +1177,6 @@ img {
 
 .footer-nav-bottom {
   margin-left: 67px;
-
 }
 
 .footer-nav-bottom a {
@@ -1201,7 +1224,6 @@ site-navigation-item-special {
   display: flex;
   justify-content: space-between;
   margin-left: 15px;
-
 }
 
 .footer-text {
@@ -1251,6 +1273,10 @@ site-navigation-item-special {
   background-position: center;
 }
 
+.social-button:hover {
+  background-color: var(--basic-red);
+}
+
 .vk {
   background-image: url("../img/icon-vk.svg");
   background-size: 26px 16px;
@@ -1267,9 +1293,7 @@ site-navigation-item-special {
 }
 
 /* Catalog html */
-
 /* header */
-
 .user {
   background-image: url("../img/user-background.jpg");
   filter: drop-shadow(0px 4px 4px var(--slider-background));
@@ -1351,11 +1375,11 @@ site-navigation-item-special {
 /* main */
 
 .wrapper {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
 }
 
 .title {
-  font-family: Cuprum;
+  font-family: "Cuprum", "sans-serif";
 }
 
 /* Grid */
@@ -1691,7 +1715,27 @@ site-navigation-item-special {
   fill: var(--basic-black);
 }
 
-/*кнопки "купить" и "в закладки" */
+/*Catalog*/
+
+.catalog-item:hover .catalog-img-block {
+  display: none;
+  padding-top: 27px;
+}
+
+.catalog-item:hover {
+  border: none;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-buttons {
+  display: none;
+}
+
+.catalog-item:hover .catalog-buttons {
+  display: block;
+}
+
+
 .buy-button,
 .favourite-button {
   width: 135px;
@@ -1699,7 +1743,7 @@ site-navigation-item-special {
   box-sizing: border-box;
   font-size: 14px;
   line-height: 18px;
-  font-family: Cuprum;
+  font-family: Cuprum, "sans-serif";
   border-radius: 2px;
   text-transform: uppercase;
   margin-top: 10px;
@@ -1904,7 +1948,7 @@ site-navigation-item-special {
 
 .modal-writeus input,
 .modal-writeus textarea {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "sans-serif";
   outline: none;
   color: var(--grey);
   border-radius: 2px;
