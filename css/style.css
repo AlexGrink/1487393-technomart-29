@@ -92,11 +92,6 @@ img {
 
 .button:active {
   background-color: var(--active-red);
-  outline: none;
-}
-
-.button:focus {
-  outline: none;
 }
 
 .container {
@@ -230,9 +225,6 @@ img {
   left: 20px;
   width: 14px;
   height: 16px;
-  background-image: url("../img/icon-bookmark.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   opacity: 0.3;
 }
 
@@ -242,19 +234,12 @@ img {
   padding-left: 50px;
 }
 
-.favourite {
-  padding-left: 44px;
-}
-
 .cart img {
   position: absolute;
   top: 13px;
   left: 26px;
   width: 15px;
   height: 15px;
-  background-image: url("../img/icon-cart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   opacity: 0.3;
 }
 
@@ -307,11 +292,6 @@ img {
 .order-button:active,
 .search:active::placeholder {
   color: var(--active-white);
-}
-
-.order-button:focus,
-.search:focus {
-  outline: none;
 }
 
 .search:focus::placeholder {
@@ -415,15 +395,11 @@ img {
 }
 
 .login-icon {
-  content: "";
   position: absolute;
   top: 14px;
   left: 19px;
   width: 20px;
   height: 17px;
-  background-image: url("../img/icon-login.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .register-button {
@@ -447,11 +423,6 @@ img {
 
 .login-button:active .login-icon-path {
   fill: var(--grey);
-}
-
-.login-button:focus,
-.register-button:focus {
-  outline: none;
 }
 
 .site-navigation {
@@ -568,7 +539,7 @@ img {
   height: 70px;
   top: 0;
   right: 0;
-  background-image: url(../img/catalogue-new.png);
+  background-image: url("../img/catalogue-new.png");
 }
 
 .promo-item:last-child {
@@ -639,7 +610,7 @@ img {
   position: absolute;
   width: 620px;
   height: 266px;
-  background-image: url(../img/promo-slider-perforators.jpg);
+  background: var(--basic-dark) url("../img/promo-slider-perforators.jpg");
   top: 0;
   left: 0;
   z-index: -1;
@@ -650,7 +621,7 @@ img {
   position: absolute;
   width: 620px;
   height: 266px;
-  background-image: url(../img/promo-slider-drills.jpg);
+  background-image: url("../img/promo-slider-drills.jpg");
   top: 0;
   left: 0;
   z-index: -1;
@@ -681,13 +652,14 @@ img {
 .slider-radiobuttons label {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   cursor: pointer;
   width: 10px;
   height: 10px;
   background-color: var(--basic-white);
   background-position: 0 0;
   border-radius: 50%;
-  margin-top: 17px;
+  margin-top: 9px;
   margin-right: 7px;
 }
 
@@ -788,6 +760,9 @@ img {
   text-align: center;
 }
 
+.catalog-item img {
+  background-color: red;
+}
 
 .catalog-img-block {
   box-sizing: border-box;
@@ -960,7 +935,7 @@ img {
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 1px;
+  bottom: 3px;
   right: 11px;
   background-image: url("../img/delivery-truck.png");
 }
@@ -970,7 +945,7 @@ img {
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 1px;
+  bottom: 3px;
   right: 11px;
   background-image: url("../img/services-guarantee.png");
 }
@@ -980,7 +955,7 @@ img {
   position: absolute;
   width: 468px;
   height: 261px;
-  bottom: 1px;
+  bottom: 3px;
   right: 11px;
   background-image: url("../img/services-credit.png");
 }
@@ -1070,7 +1045,7 @@ img {
   height: 2px;
   top: 12px;
   left: -37px;
-  background-image: url(../img/about-list-style.png);
+  background-image: url("../img/about-list-style.png");
 }
 
 .about .button {
@@ -1088,8 +1063,14 @@ img {
 }
 
 .contacts-map {
+  width: 300px;
+  height: 158px;
+  padding: 0;
+  margin: 0;
+  border: none;
   background-color: var(--beige);
-  margin-bottom: 18px;
+  margin-bottom: 25px;
+
 }
 
 .contacts p {
@@ -1412,6 +1393,7 @@ site-navigation-item-special {
   left: -25px;
   top: 3.25px;
   background-image: url("../img/breadcrumbs-list-style.svg");
+
   height: 10.3px;
   width: 6.5px;
   background-position: center;
@@ -1507,9 +1489,7 @@ site-navigation-item-special {
 
 .min-price,
 .max-price {
-  display: inline-block;
   border: none;
-  outline: none;
   width: 95px;
   height: 38px;
   background-color: #F7F3EC;
@@ -1520,23 +1500,17 @@ site-navigation-item-special {
   line-height: 30px;
 }
 
-.min-price,
-.max-price .min-price label {
-  display: inline-block;
-  text-align: center;
-
-}
-
 .price-controls {
   margin-top: 9px;
   font-size: 0;
 }
 
 .price-controls span {
-  display: inline-block;
   width: 30px;
   line-height: 18px;
   font-size: 16px;
+  display: inline-block;
+  vertical-align: baseline;
   text-align: center;
 }
 
@@ -1708,12 +1682,14 @@ site-navigation-item-special {
 
 /*Catalog*/
 
-.catalog-item:hover .catalog-img-block {
+.catalog-item:hover .catalog-img-block,
+.catalog-item:focus .catalog-img-block {
   display: none;
   padding-top: 27px;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.catalog-item:focus {
   border: none;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -1722,7 +1698,8 @@ site-navigation-item-special {
   display: none;
 }
 
-.catalog-item:hover .catalog-buttons {
+.catalog-item:hover .catalog-buttons,
+.catalog-item:focus .catalog-buttons {
   display: block;
 }
 
@@ -1758,7 +1735,6 @@ site-navigation-item-special {
   height: 15px;
   top: 10px;
   left: 30px;
-  background-image: url("../img/icon-cart.svg");
   opacity: 0.3;
 }
 
@@ -1775,7 +1751,6 @@ site-navigation-item-special {
 .buy-button:active,
 .buy-button:focus {
   background-color: #518534;
-  outline: none;
 }
 
 .favourite-button:hover {
@@ -1784,10 +1759,6 @@ site-navigation-item-special {
 
 .favourite-button:active {
   opacity: 0.5;
-}
-
-.favourite-button:focus {
-  outline: none;
 }
 
 /* GOODS */
@@ -1906,13 +1877,12 @@ site-navigation-item-special {
 
 .modal-close {
   border: none;
-  outline: none;
   cursor: pointer;
   background-color: transparent;
   position: absolute;
   right: 11px;
   top: 14px;
-  background-image: url(../img/icon-close.svg);
+  background-image: url("../img/icon-close.svg");
   width: 21px;
   height: 21px;
 
@@ -1941,7 +1911,6 @@ site-navigation-item-special {
 .modal-writeus input,
 .modal-writeus textarea {
   font-family: "PT Sans", Arial, sans-serif;
-  outline: none;
   color: var(--grey);
   border-radius: 2px;
   box-sizing: border-box;
@@ -2023,6 +1992,7 @@ site-navigation-item-special {
 
 .modal-cart-button {
   display: inline-block;
+  vertical-align: middle;
   width: 192px;
   height: 38px;
   margin-right: 6px;

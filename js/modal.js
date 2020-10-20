@@ -3,7 +3,7 @@ const contactsSection = document.querySelector(`.contacts`);
 const modalMap = document.querySelector(`.modal-map`);
 const modalWriteUs = document.querySelector(`.modal-writeus`);
 const smallMap = contactsSection.querySelector(`.contacts-map`);
-const buttonModalContact = contactsSection.querySelector(`button`);
+const buttonModalContact = contactsSection.querySelector(`.writeus-button`);
 const modalMapClose = modalMap.querySelector(`.modal-close`);
 const writeUsClose = modalWriteUs.querySelector(`.modal-close`);
 

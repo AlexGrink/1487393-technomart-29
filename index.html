@@ -21,8 +21,8 @@
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт">
           </a>
           <form class="search-form" action="#" method="get">
-            <label for="search" class="search-label"><svg class="search-icon" width="17" height="17" viewBox="0 0 17 17"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+            <label for="search" class="search-label"><svg class="search-icon" aria-hidden="true" focusable="false"
+                width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="1">
                   <path class="search-svg-path" fill-rule="evenodd" clip-rule="evenodd"
                     d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
@@ -30,12 +30,12 @@
                 </g>
               </svg></label>
             <input class="search" type="search" id="search" name="search" placeholder="Поиск:">
-            <button type="submit" class="visually-hidden"></button>
           </form>
           <a class="favourite" href="#">
-            <img class="favourite-icon" src="img/icon-bookmark.svg" alt="Иконка закладки">Закладки: 0</a>
-          <a class="cart" href="#"><img class="cart-icon" src="img/icon-cart.svg" alt="Иконка корзины">Корзина: 0</a>
-          <a class="order-button">Оформить заказ</a>
+            <img class="favourite-icon" src="img/icon-bookmark.svg" width="14" height="16" alt="">Закладки: 0</a>
+          <a class="cart" href="#"><img class="cart-icon" src="img/icon-cart.svg" width="15" height="15" alt="">Корзина:
+            0</a>
+          <a class="order-button" href="">Оформить заказ</a>
         </div>
       </div>
       <div class="container">
@@ -50,9 +50,9 @@
             <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </p>
           <div class="guest-buttons">
-            <a class="login-button">
-              <svg class="login-icon" width="20" height="17" viewBox="0 0 20 17" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <a class="login-button" href="">
+              <svg class="login-icon" aria-hidden="true" focusable="false" width="20" height="17" viewBox="0 0 20 17"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="login-icon-path" d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z"
                   fill="#C5C5C5" />
                 <path class="login-icon-path"
@@ -61,7 +61,7 @@
               </svg>
               Войти
             </a>
-            <a class="register-button">Регистрация</a>
+            <a class="register-button" href="">Регистрация</a>
           </div>
         </div>
         <ul class=" site-navigation">
@@ -106,20 +106,20 @@
             <!--Кнопки вперед и назад-->
             <div class="slider-buttons">
               <button class="button-back" type="button"><img src="img/icon-left.svg" width="22" height="40"
-                  alt="стрелка"></button>
+                  alt="Предыдущий слайд стрелка"></button>
               <button class="button-next" type="button"><img src="img/icon-left.svg" width="22" height="40"
-                  alt="стрелка"></button>
+                  alt="Следующий слайд стрелка"></button>
             </div>
             <div class="promo-row">
               <a class="button" href="catalog.html">Открыть каталог</a>
               <!--Нижние кнопки на слайдере-->
               <form class="slider-radiobuttons">
                 <input class="visually-hidden slider-radio" type="radio" id="slider-radio-left" name="slider-radio"
-                  value="slide1">
-                <label for="slider-radio-left"></label>
+                  value="slide1" tabindex="-1">
+                <label aria-label="Кнопка перехода на первый-слайд" for="slider-radio-left" tabindex="0"></label>
                 <input class="visually-hidden slider-radio" type="radio" id="slider-radio-right" name="slider-radio"
-                  value="slide2" checked>
-                <label for="slider-radio-right"></label>
+                  value="slide2" tabindex="-1" checked>
+                <label aria-label="Кнопка перехода на второй-слайд" for="slider-radio-right" tabindex="0"></label>
               </form>
             </div>
           </li>
@@ -136,10 +136,10 @@
       <section class="popular">
         <div class="popular-header">
           <h2 class="title">Популярные товары:</h2>
-          <a class="button">Все популярные товары</a>
+          <a class="button" href="">Все популярные товары</a>
         </div>
         <ul class="popular-list">
-          <li class="popular-list-item catalog-item">
+          <li class="popular-list-item catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -149,9 +149,9 @@
             </div>
             <h3>Перфоратор BOSCH BFG 9000</h3>
             <del>32500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price">25500 Р.</span>
           </li>
-          <li class="popular-list-item catalog-item new-item">
+          <li class="popular-list-item catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -161,9 +161,9 @@
             </div>
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
-            <a class="price" href="">15500 Р.</a>
+            <span class="price">15500 Р.</span>
           </li>
-          <li class="popular-list-item catalog-item">
+          <li class="popular-list-item catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -173,9 +173,9 @@
             </div>
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price">25500 Р.</span>
           </li>
-          <li class="popular-list-item catalog-item new-item">
+          <li class="popular-list-item catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -185,7 +185,7 @@
             </div>
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <del class="hidden"></del>
-            <a class="price" href="">12500 Р.</a>
+            <span class="price">12500 Р.</span>
           </li>
         </ul>
       </section>
@@ -195,28 +195,33 @@
           <a class="button brands-button" href="">все производители</a>
         </div>
         <ul class="brands-list">
-          <li class="brands-list-item"><a href=""><img src="img/bosch-logo.png" width="220" height="145" alt="bosch">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда bosch"><img src="img/bosch-logo.png"
+                width="220" height="145" alt="bosch логотип">
             </a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/makita-logo.png" width="220" height="145" alt="makita">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда makita"><img
+                src="img/makita-logo.png" width="220" height="145" alt="makita логотип">
             </a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/dewalt-logo.png" width="220" height="145"
-                alt="dewalt"></a>
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда dewalt"><img
+                src="img/dewalt-logo.png" width="220" height="145" alt="dewalt логотип"></a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/interskol-logo.png" width="220" height="145"
-                alt="интерскол"></a>
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда интерскол"><img
+                src="img/interskol-logo.png" width="220" height="145" alt="интерскол логотип"></a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/hitachi-logo.png" width="220" height="145"
-                alt="hitachi">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда hitachi"><img
+                src="img/hitachi-logo.png" width="220" height="145" alt="hitachi логотип">
             </a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/lg-logo.png" width="220" height="145" alt="lg">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда lg"><img src="img/lg-logo.png"
+                width="220" height="145" alt="lg логотип">
             </a>
           </li>
-          <li class="brands-list-item"><a href=""><img src="img/aeg-logo.png" width="220" height="145" alt="aeg">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда aeg"><img src="img/aeg-logo.png"
+                width="220" height="145" alt="aeg логотип">
             </a> </li>
-          <li class="brands-list-item"><a href=""><img src="img/metabo-logo.png" width="220" height="145" alt="metabo">
+          <li class="brands-list-item"><a href="" aria-label="Каталог:товары бренда metabo"><img
+                src="img/metabo-logo.png" width="220" height="145" alt="metabo логотип">
             </a>
           </li>
         </ul>
@@ -280,8 +285,9 @@
         <h2 class="title special-title">Контакты</h2>
         <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
-        <img class="contacts-map" src="img/map.png" width="300" height="158" alt="Карта - Большая Конюшенная 19"><br>
-        <button class="button" type="button">Заблудились? Напишите нам!</button>
+        <button class="contacts-map" type="button"><img src="img/map.png" width="300" height="158"
+            alt="Карта - Большая Конюшенная 19"></button>
+        <button class="button writeus-button" type="button">Заблудились? Напишите нам!</button>
       </section>
     </div>
   </main>
@@ -335,7 +341,7 @@
   </footer>
 
   <section class="modal modal-writeus" hidden>
-    <button class="modal-close"></button>
+    <button class="modal-close" aria-label="Закрыть форму"></button>
     <form action="https://echo.htmlacademy.ru" method="post">
       <label>Ваше имя:<input type="text" name="text" placeholder="Имя Фамилия"></label>
       <label>Ваш e-mail:<input type="email" name="email" placeholder="email@example.com"></label>
@@ -349,7 +355,7 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
       width="943" height="443" allowfullscreen
       title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-    <button class="modal-close"></button>
+    <button class="modal-close" aria-label="Закрыть форму"></button>
   </section>
   <script src="js/modal.js"></script>
 </body>
