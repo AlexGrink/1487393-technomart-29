@@ -7,7 +7,8 @@ const buttonModalContact = contactsSection.querySelector(`.writeus-button`);
 const modalMapClose = modalMap.querySelector(`.modal-close`);
 const writeUsClose = modalWriteUs.querySelector(`.modal-close`);
 
-smallMap.addEventListener(`click`, () => {
+smallMap.addEventListener(`click`, (evt) => {
+  evt.preventDefault();
   modalMap.hidden=false;
 });
 
