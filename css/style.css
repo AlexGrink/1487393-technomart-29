@@ -234,6 +234,10 @@ img {
   padding-left: 50px;
 }
 
+.favourite {
+  padding-left: 43px;
+}
+
 .cart img {
   position: absolute;
   top: 13px;
