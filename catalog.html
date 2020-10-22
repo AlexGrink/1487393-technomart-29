@@ -21,8 +21,8 @@
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип магазина Техномарт" />
           </a>
           <form class="search-form" action="#" method="get">
-            <label for="search" class="search-label"><svg class="search-icon" width="17" height="17" viewBox="0 0 17 17"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
+            <label for="search" class="search-label"><svg class="search-icon" aria-hidden="true" focusable="false"
+                width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="1">
                   <path class="search-svg-path" fill-rule="evenodd" clip-rule="evenodd"
                     d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
@@ -30,15 +30,15 @@
                 </g>
               </svg></label>
             <input class="search" type="search" id="search" name="search" placeholder="Поиск:">
-            <button type="submit" class="visually-hidden"></button>
           </form>
           <a class="favourite" href="#">
-            <img class="favourite-icon" src="img/icon-bookmark.svg" alt="иконка">Закладки: 0
+            <img aria-hidden="true" focusable="false" class="favourite-icon" src="img/icon-bookmark.svg"
+              alt="иконка">Закладки: 0
           </a>
           <a class="cart catalog-cart" href="#">
-            <img class="cart-icon" src="img/icon-cart.svg" alt="иконка">Корзина: 10
+            <img aria-hidden="true" focusable="false" class="cart-icon" src="img/icon-cart.svg" alt="иконка">Корзина: 10
           </a>
-          <a class="order-button">Оформить заказ</a>
+          <a class="order-button" href="">Оформить заказ</a>
         </div>
       </div>
       <div class="container">
@@ -54,17 +54,17 @@
           </p>
           <div class="user-columns">
             <div class="user">
-              <a class="user-link" href="">
-                <svg class="user-svg" width="20" height="18" viewBox="0 0 20 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+              <a class="user-link" href="" aria-label="Мой аккаунт">
+                <svg class="user-svg" aria-hidden="true" focusable="false" width="20" height="18" viewBox="0 0 20 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="user-svg-path"
                     d="M17.881 14.166C15.737 13.431 13.625 12.5 12.674 11.776C12.017 11.275 11.904 10.158 12.157 9.361C13.275 8.458 14.021 6.884 14.021 5.083C14.021 2.276 12.221 0 10 0C7.77902 0 5.97901 2.276 5.97901 5.083C5.97901 6.884 6.72501 8.457 7.84201 9.36C8.09501 10.158 7.98302 11.275 7.32502 11.776C6.37502 12.5 4.26201 13.43 2.11801 14.166C-0.0259852 14.902 1.48343e-05 18 1.48343e-05 18H20C20 18 20.025 14.901 17.881 14.166Z"
                     fill="#C5C5C5" />
                 </svg>
                 <span>Равшан Джамшутович</span>
               </a>
-              <a href=""><svg class="user-svg" width="20" height="17" viewBox="0 0 20 17" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
+              <a href="" aria-label="Выйти из аккаунта"><svg class="user-svg" aria-hidden="true" focusable="false"
+                  width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="user-svg-path" d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z" fill="#C5C5C5" />
                   <path class="user-svg-path"
                     d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"
@@ -93,7 +93,8 @@
   <main class="wrapper">
     <div class="container catalog-columns">
       <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a href="index.html"><img src="img/icon-home.svg" alt="home-page"> </a></li>
+        <li class="breadcrumbs-item"><a href="index.html" aria-label="Кнопка Домой"><img aria-hidden="true"
+              focusable="false" src="img/icon-home.svg" alt="home-page"> </a></li>
         <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
         <li class="breadcrumbs-item"><a href="">Инструмент</a></li>
         <li class="breadcrumbs-item">Перфораторы</li>
@@ -109,13 +110,14 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" style="left:18.5px" tabindex="0"></div>
-                <div class="toggle toggle-max" style="left:160px" tabindex="0"></div>
+                <div class="toggle toggle-min" style="left:18.5px"></div>
+                <div class="toggle toggle-max" style="left:160px"></div>
               </div>
               <div class="price-controls">
-                <input class="min-price" type="text" name="min-price" value="0">
+                <input class="min-price" type="text" name="min-price" value="0" aria-label="Фильтр:Минимальная цена">
                 <span>—</span>
-                <input class="max-price" type="text" name="max-price" value="30000">
+                <input class="max-price" type="text" name="max-price" value="30000"
+                  aria-label="Фильтр:Максимальная цена">
               </div>
             </div>
           </fieldset>
@@ -155,7 +157,7 @@
               </li>
             </ul>
           </fieldset>
-          <input class="filter-submit" type="submit" value="ПОКАЗАТЬ">
+          <button class="filter-submit">показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -170,13 +172,15 @@
         <label for="sorting-functional" class="sorting-control">По функционалу</label>
         <label class="ascending-button">
           <input class="visually-hidden direction-input" type="radio" name="direction-input" checked>
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
           </svg>
         </label>
         <label class="descending-button">
           <input class="visually-hidden direction-input" type="radio" name="direction-input">
-          <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
           </svg>
         </label>
@@ -184,7 +188,7 @@
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="goods-list">
-          <li class=" catalog-item inner-catalog-item">
+          <li class=" catalog-item inner-catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -194,9 +198,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price" href="">25500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item">
+          <li class=" catalog-item inner-catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -206,9 +210,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price" href="">25500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item new-item">
+          <li class=" catalog-item inner-catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -218,9 +222,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price" href="">25500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item new-item">
+          <li class=" catalog-item inner-catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -230,9 +234,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
-            <a class="price" href="">15500 Р.</a>
+            <span class="price" href="">15500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item">
+          <li class=" catalog-item inner-catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -242,9 +246,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price" href="">25500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item new-item">
+          <li class=" catalog-item inner-catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -254,9 +258,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 2000</h3>
             <del class="hidden"></del>
-            <a class="price" href="">12500 Р.</a>
+            <span class="price" href="">12500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item new-item">
+          <li class=" catalog-item inner-catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -266,9 +270,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 3000</h3>
             <del>22500 Р.</del>
-            <a class="price" href="">15500 Р.</a>
+            <span class="price" href="">15500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item">
+          <li class=" catalog-item inner-catalog-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -278,9 +282,9 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 6000</h3>
             <del>30500 Р.</del>
-            <a class="price" href="">25500 Р.</a>
+            <span class="price" href="">25500 Р.</span>
           </li>
-          <li class=" catalog-item inner-catalog-item new-item">
+          <li class=" catalog-item inner-catalog-item new-item" tabindex="0">
             <div class="catalog-buttons catalog-img-block">
               <button class="buy-button" type="button">купить</button>
               <button class="favourite-button" type="button">в закладки</button>
@@ -290,21 +294,22 @@
             </div>
             <h3 class="goods-title">Перфоратор BOSCH BFG 2000</h3>
             <del class="hidden"></del>
-            <a class="price" href="">12500 Р.</a>
+            <span class="price" href="">12500 Р.</span>
           </li>
         </ul>
       </section>
       <ul class="pagination">
         <li class="pagination-page active-page">
-          <a>1</a>
+          <a href="" aria-label="Каталог: Страница 1">1</a>
         </li>
         <li class="pagination-page">
-          <a href="">2</a>
+          <a href="" aria-label="Каталог: Страница 2">2</a>
         </li>
         <li class="pagination-page">
-          <a href="">3</a>
+          <a href="" aria-label="Каталог: Страница 3">3</a>
         </li>
-        <li class="pagination-page next-page"><a href="">Следующая</a></li>
+        <li class="pagination-page next-page"><a href=""
+            aria-label="Перейти на следующую страницу каталога">Следующая</a></li>
       </ul>
     </div>
     <section class="about-goods">
@@ -350,11 +355,11 @@
         <p class="copyright">© 2010–2019 Компания «Техномарт»
           Все права защищены</p>
         <ul class="social">
-          <li><a class="social-button vk" href="vk.com"></a>
+          <li><a class="social-button vk" href="vk.com" aria-label="Вконтакте"></a>
           </li>
-          <li><a class="social-button facebook" href="fb.com"></a>
+          <li><a class="social-button facebook" href="fb.com" aria-label="Facebook"></a>
           </li>
-          <li><a class="social-button instagram" href="instagram.com"></a>
+          <li><a class="social-button instagram" href="instagram.com" aria-label="Instagram"></a>
           </li>
         </ul>
         <div class="footer-copyright">
@@ -373,8 +378,8 @@
     <button class="modal-close"></button>
     <h3>Товар добавлен в корзину!</h3>
     <div class="modal-cart-buttons">
-      <a class="modal-cart-button button">Оформить заказ</a>
-      <a class="modal-cart-button button">Продолжить покупки</a>
+      <a class="modal-cart-button button" href="">Оформить заказ</a>
+      <a class="modal-cart-button button" href="">Продолжить покупки</a>
     </div>
   </section>
   <script src="js/catalog-modal.js"></script>

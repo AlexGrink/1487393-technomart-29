@@ -193,7 +193,7 @@ img {
 
 .search-form:focus-within .search-svg-path {
   opacity: 1;
-  fill: red;
+  fill: var(--basic-red);
 }
 
 .search::placeholder {
@@ -761,7 +761,7 @@ img {
 }
 
 .catalog-item img {
-  background-color: red;
+  background-color: var(--basic-red);
 }
 
 .catalog-img-block {
@@ -1063,14 +1063,11 @@ img {
 }
 
 .contacts-map {
+  display: block;
   width: 300px;
   height: 158px;
-  padding: 0;
-  margin: 0;
-  border: none;
   background-color: var(--beige);
-  margin-bottom: 25px;
-
+  margin-bottom: 26px;
 }
 
 .contacts p {
@@ -1555,6 +1552,10 @@ site-navigation-item-special {
   background: url("../img/checkbox-off.svg") no-repeat;
 }
 
+.filter-input-checkbox:hover+label::before {
+  background: url("../img/checkbox-off-hover.svg") no-repeat;
+}
+
 .filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
@@ -1565,6 +1566,18 @@ site-navigation-item-special {
   background-color: white;
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked:hover+label::after {
+  background-image: url("../img/checkbox-on-hover.svg");
+}
+
+.filter-input-checkbox:focus+label,
+.filter-input-radio:focus+label,
+.sorting-control-input:focus+label,
+.direction-input:focus+svg {
+  color: var(--basic-red);
+  outline: 1px solid var(--basic-black);
 }
 
 .filter-fieldset-power {
@@ -1591,6 +1604,10 @@ site-navigation-item-special {
   background: url("../img/radio-off.svg") no-repeat;
 }
 
+.filter-input-radio:hover+label::before {
+  background: url("../img/radio-off-hover.svg");
+}
+
 .filter-input-radio:checked+label::after {
   content: "";
   position: absolute;
@@ -1603,6 +1620,10 @@ site-navigation-item-special {
   background-repeat: no-repeat;
 }
 
+.filter-input-radio:checked:hover+label::after {
+  background-image: url("../img/radio-on-hover.svg");
+}
+
 .filter-submit {
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
@@ -1613,6 +1634,7 @@ site-navigation-item-special {
   text-align: center;
   font-size: 13px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .filters {
@@ -1677,7 +1699,7 @@ site-navigation-item-special {
 }
 
 .direction-input:checked~svg>path {
-  fill: red;
+  fill: var(--basic-red);
 }
 
 /*Catalog*/
