@@ -1502,6 +1502,7 @@ site-navigation-item-special {
 }
 
 .price-controls {
+  display: block;
   margin-top: 9px;
   font-size: 0;
 }
@@ -1651,11 +1652,22 @@ site-navigation-item-special {
   grid-column: 2/-1;
   grid-row: 3/4;
   height: 38px;
+  box-sizing: border-box;
+}
+
+.sorting form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  width: 700px;
+  min-height: 38px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .sorting h2 {
+  margin: 0;
   margin-left: 20px;
   margin-right: 140px;
 }

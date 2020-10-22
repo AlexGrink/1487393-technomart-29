@@ -160,29 +160,31 @@
         </form>
       </section>
       <section class="sorting">
-        <h2>Сортировка:</h2>
-        <input class="visually-hidden sorting-control-input" type="radio" id="sorting-price" name="sorting-control"
-          checked>
-        <label class="sorting-control" for="sorting-price">По цене</label>
-        <input class="visually-hidden sorting-control-input" id="sorting-type" type="radio" name="sorting-control">
-        <label class="sorting-control" for="sorting-type">По типу</label>
-        <input class="visually-hidden sorting-control-input" type="radio" id="sorting-functional"
-          name="sorting-control">
-        <label for="sorting-functional" class="sorting-control">По функционалу</label>
-        <label class="ascending-button">
-          <input class="visually-hidden direction-input" type="radio" name="direction-input" checked>
-          <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
-          </svg>
-        </label>
-        <label class="descending-button">
-          <input class="visually-hidden direction-input" type="radio" name="direction-input">
-          <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
-          </svg>
-        </label>
+        <form>
+          <h2>Сортировка:</h2>
+          <input class="visually-hidden sorting-control-input" type="radio" id="sorting-price" name="sorting-control"
+            checked>
+          <label class="sorting-control" for="sorting-price">По цене</label>
+          <input class="visually-hidden sorting-control-input" id="sorting-type" type="radio" name="sorting-control">
+          <label class="sorting-control" for="sorting-type">По типу</label>
+          <input class="visually-hidden sorting-control-input" type="radio" id="sorting-functional"
+            name="sorting-control">
+          <label for="sorting-functional" class="sorting-control">По функционалу</label>
+          <label class="ascending-button">
+            <input class="visually-hidden direction-input" type="radio" name="direction-input" checked>
+            <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
+            </svg>
+          </label>
+          <label class="descending-button">
+            <input class="visually-hidden direction-input" type="radio" name="direction-input">
+            <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path class="sorting-svg-path" d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
+            </svg>
+          </label>
+        </form>
       </section>
       <section class="goods">
         <h2 class="visually-hidden">Список товаров</h2>
