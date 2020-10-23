@@ -74,7 +74,7 @@ writeUsForm.addEventListener(`submit`, (evt) => {
   if (!modalLogin.value||!modalEmail.value||!modalTextarea.value) {
     evt.preventDefault();
     modalWriteUs.classList.remove(`modal-error`);
-    modalWriteUs.offsetWidth == modalWriteUs.offsetWidth;
+    void modalWriteUs.offsetWidth;
     modalWriteUs.classList.add(`modal-error`);
   }
   else {
