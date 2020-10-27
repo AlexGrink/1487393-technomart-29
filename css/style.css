@@ -43,6 +43,7 @@
   --active-dark-transparent: rgba(169, 169, 169, 0.3);
   --black-transparent: rgba(0, 0, 0, 0.15);
   --black-shadow: rgba(0, 0, 0, 0.24);
+  --strange-beige: #FFDA96;
 }
 
 /* Global */
@@ -1172,8 +1173,8 @@ img {
   color: var(--special-beige);
 }
 
-site-navigation-item-special {
-  color: var(--special-beige);
+.site-navigation-item-special a {
+  color: var(--strange-beige);
 }
 
 .footer-nav .footer-nav-item a:hover {
@@ -1582,6 +1583,10 @@ site-navigation-item-special {
   background: url("../img/checkbox-off-hover.svg") no-repeat;
 }
 
+.filter-input-checkbox:disabled+label {
+  opacity: 0.3;
+}
+
 .filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
@@ -1596,6 +1601,10 @@ site-navigation-item-special {
 
 .filter-input-checkbox:checked:hover+label::after {
   background-image: url("../img/checkbox-on-hover.svg");
+}
+
+.filter-input-checkbox:checked:disabled+label {
+  opacity: 0.3;
 }
 
 .filter-input-checkbox:focus+label,
@@ -1634,6 +1643,10 @@ site-navigation-item-special {
   background: url("../img/radio-off-hover.svg");
 }
 
+.filter-input-radio:disabled+label {
+  opacity: 0.3;
+}
+
 .filter-input-radio:checked+label::after {
   content: "";
   position: absolute;
@@ -1648,6 +1661,10 @@ site-navigation-item-special {
 
 .filter-input-radio:checked:hover+label::after {
   background-image: url("../img/radio-on-hover.svg");
+}
+
+.filter-input-radio:checked:disabled+label::after {
+  opacity: 0.3;
 }
 
 .filter-submit {
@@ -1731,7 +1748,7 @@ site-navigation-item-special {
 
 .sorting-control-input:checked+label {
   color: var(--basic-red);
-  border-bottom: none;
+  border-bottom: 1px dotted transparent;
   opacity: 1;
 }
 
@@ -1749,7 +1766,7 @@ site-navigation-item-special {
 
 .catalog-item:hover,
 .catalog-item:focus {
-  border: none;
+  border: 1px solid transparent;
   box-shadow: 0px 4px 20px var(--black-transparent);
 }
 
@@ -1836,10 +1853,6 @@ site-navigation-item-special {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.goods-list .new-item .catalog-img-block {
-  margin-bottom: -px;
 }
 
 /* Pagination */
